@@ -18,7 +18,11 @@ class ShowsViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        tableView.rowHeight = 200
+        tableView.estimatedRowHeight = 300
+        tableView.dataSource = self
+        
         fetchShows()
     }
     
@@ -44,11 +48,50 @@ class ShowsViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "showsCell", for: indexPath) as! ShowsViewCell
+        
+        do{
+            let titleDic = (posts as AnyObject).value(forKey: "title")
+            let contentDic = (posts as AnyObject).value(forKey: "content")
+            
+            let titleDicString = titleDic as? [[String: Any]]
+            let contentDicString = contentDic as? [[String: Any]]
+            
+            self.postsTitle = titleDicString!
+            self.postsContent = contentDicString!
+        }
+        let postTitle = postsTitle[indexPath.row]
+        let postContent = postsContent[indexPath.row]
+        
+        let encoded = postTitle["rendered"] as? String
+        let htmlTag =  postContent["rendered"] as! String
+        
+        cell.titleLabel.text = encoded?.stringByDecodingHTMLEntities
+        
+        let html2 = htmlTag.allStringsBetween(start: "iframe src=", end: "/iframe")
+        let input = String(describing: html2)
+        let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+        let matches = detector.matches(in: input, options: [], range: NSRange(location: 0, length: input.utf16.count))
+        for match in matches {
+            guard let range = Range(match.range, in: input) else { continue }
+            let urlYou = input[range]
+            if urlYou != ""{
+                urlShows = String(urlYou)
+                print(urlShows)
+                
+                if let url = URL(string: urlShows) {
+                    let request = URLRequest(url: url)
+                    cell.webView.load(request)
+                }
+                
+            }
+            else{
+            }
+        }
         return cell
     }
     

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,13 +60,50 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="showsCell" id="caz-fi-2hO" customClass="ShowsViewCell" customModule="Bibinetalkole" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="showsCell" rowHeight="250" id="caz-fi-2hO" customClass="ShowsViewCell" customModule="Bibinetalkole" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="caz-fi-2hO" id="MAp-te-243">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLV-oA-iKN">
+                                                    <rect key="frame" x="23" y="155" width="329" height="76"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="329" id="281-gZ-vIM"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="Yb3-wQ-LbJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZM-Nv-fA4">
+                                                    <rect key="frame" x="23" y="19" width="329" height="128"/>
+                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="329" id="YrS-J9-AJi"/>
+                                                        <constraint firstAttribute="height" constant="128" id="rCd-e9-siQ"/>
+                                                    </constraints>
+                                                    <wkWebViewConfiguration key="configuration">
+                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                        <wkPreferences key="preferences"/>
+                                                    </wkWebViewConfiguration>
+                                                </wkWebView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NLV-oA-iKN" firstAttribute="leading" secondItem="MAp-te-243" secondAttribute="leadingMargin" constant="8" id="Cqn-WE-UNj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IZM-Nv-fA4" secondAttribute="trailing" constant="8" id="He4-SZ-rSc"/>
+                                                <constraint firstItem="IZM-Nv-fA4" firstAttribute="leading" secondItem="MAp-te-243" secondAttribute="leadingMargin" constant="8" id="K3b-vG-una"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NLV-oA-iKN" secondAttribute="trailing" constant="8" id="L2X-Cj-NZs"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NLV-oA-iKN" secondAttribute="bottom" constant="8" id="LHH-us-JJZ"/>
+                                                <constraint firstItem="IZM-Nv-fA4" firstAttribute="top" secondItem="MAp-te-243" secondAttribute="topMargin" constant="8" id="dl5-8X-nFa"/>
+                                                <constraint firstItem="NLV-oA-iKN" firstAttribute="top" secondItem="IZM-Nv-fA4" secondAttribute="bottom" constant="8" id="vgK-qE-Lxb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="NLV-oA-iKN" id="dJn-Uj-zmf"/>
+                                            <outlet property="webView" destination="IZM-Nv-fA4" id="WYD-5V-b4a"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

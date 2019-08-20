@@ -17,6 +17,7 @@
 		9635B7EF230C503600CF32D2 /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7EC230C503300CF32D2 /* HTTPHandler.swift */; };
 		9635B7F0230C503600CF32D2 /* AyiboAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7ED230C503400CF32D2 /* AyiboAPIManager.swift */; };
 		9635B7F1230C503600CF32D2 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7EE230C503500CF32D2 /* Swift+Gif.swift */; };
+		9635B7F4230C5C0C00CF32D2 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7F3230C5C0C00CF32D2 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9635B7EC230C503300CF32D2 /* HTTPHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPHandler.swift; path = Bibinetalkole/ManagerAPI/HTTPHandler.swift; sourceTree = SOURCE_ROOT; };
 		9635B7ED230C503400CF32D2 /* AyiboAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AyiboAPIManager.swift; path = Bibinetalkole/ManagerAPI/AyiboAPIManager.swift; sourceTree = SOURCE_ROOT; };
 		9635B7EE230C503500CF32D2 /* Swift+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Swift+Gif.swift"; path = "Bibinetalkole/ManagerAPI/Swift+Gif.swift"; sourceTree = SOURCE_ROOT; };
+		9635B7F3230C5C0C00CF32D2 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		9635B7C0230C2C7C00CF32D2 /* Bibinetalkole */ = {
 			isa = PBXGroup;
 			children = (
+				9635B7F2230C5BEC00CF32D2 /* Extensions */,
 				9635B7EB230C4F9100CF32D2 /* ManagerAPI */,
 				9635B7DA230C33FB00CF32D2 /* ViewCell */,
 				9635B7D5230C2D2400CF32D2 /* Controllers */,
@@ -102,6 +105,14 @@
 			);
 			name = ManagerAPI;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		9635B7F2230C5BEC00CF32D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9635B7F3230C5C0C00CF32D2 /* Strings.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			files = (
 				9635B7EF230C503600CF32D2 /* HTTPHandler.swift in Sources */,
 				9635B7F0230C503600CF32D2 /* AyiboAPIManager.swift in Sources */,
+				9635B7F4230C5C0C00CF32D2 /* Strings.swift in Sources */,
 				9635B7D9230C2D7600CF32D2 /* ShowsViewController.swift in Sources */,
 				9635B7DC230C344D00CF32D2 /* ShowsViewCell.swift in Sources */,
 				9635B7F1230C503600CF32D2 /* Swift+Gif.swift in Sources */,

@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import WebKit
 
 class ShowsViewCell: UITableViewCell {
 
+    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
