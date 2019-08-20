@@ -11,10 +11,15 @@ import UIKit
 class ShowsViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
+    var posts: [[String: Any]] = []
+    var postsTitle: [[String: Any]] = []
+    var postsContent: [[String: Any]] = []
+    var urlShows = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        fetchShows()
     }
     
     private func fetchShows(){
@@ -28,7 +33,7 @@ class ShowsViewController: UIViewController, UITableViewDataSource {
                 
                 return
             }
-            //        print(result!)
+                    print(result!)
             self.posts = result!
             //autolayout engine from a background thread” error Fixed
             DispatchQueue.main.async { //that allows the UI to update as soon as execution of thread function complete
