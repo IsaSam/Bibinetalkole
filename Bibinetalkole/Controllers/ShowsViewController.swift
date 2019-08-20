@@ -19,6 +19,8 @@ class ShowsViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Bibinetalkole"
+        
         tableView.rowHeight = 200
         tableView.estimatedRowHeight = 300
         tableView.dataSource = self
