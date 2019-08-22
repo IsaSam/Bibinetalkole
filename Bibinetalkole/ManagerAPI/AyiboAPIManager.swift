@@ -15,7 +15,7 @@ struct AyiboAPIManager{
     func get(url:String, completion: @escaping ([[String: Any]]?, String?) -> Void ){
         let urlRequest = URLRequest(url: URL(string: url)!)
         URLSession.shared.dataTask(with: urlRequest) { ( data, response, error) in
-           
+
             if error != nil {
                 completion(nil, error?.localizedDescription)
                 return

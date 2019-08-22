@@ -15,6 +15,7 @@ class ShowsViewController: UIViewController, UITableViewDataSource {
     var postsTitle: [[String: Any]] = []
     var postsContent: [[String: Any]] = []
     var urlShows = ""
+    var pageID = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,7 @@ class ShowsViewController: UIViewController, UITableViewDataSource {
     }
     
     private func fetchShows(){
-        AyiboAPIManager.shared.get(url: "http://bibinetalkole.com/wp-json/wp/v2/posts?page=2&categories=20") { (result, error) in
+        AyiboAPIManager.shared.get(url: "http://bibinetalkole.com/wp-json/wp/v2/posts?page=\(pageID)&categories=20") { (result, error) in
             if error != nil{
                 let errorAlertController = UIAlertController(title: "Cannot Get Data", message: "The Internet connections appears to be offline", preferredStyle: .alert)
                 let cancelAction = UIAlertAction(title: "Retry", style: .cancel)
@@ -39,14 +40,52 @@ class ShowsViewController: UIViewController, UITableViewDataSource {
                 
                 return
             }
-                    print(result!)
-            self.posts = result!
-            //autolayout engine from a background thread” error Fixed
-            DispatchQueue.main.async { //that allows the UI to update as soon as execution of thread function complete
-                self.tableView.reloadData() // to tell table about new data
+            if result != nil{
+             //   print(result!)
+                self.posts = result!
+                //autolayout engine from a background thread” error Fixed
+                DispatchQueue.main.async { //that allows the UI to update as soon as execution of thread function complete
+                    self.tableView.reloadData() // to tell table about new data
+                }
+            }else{
+                print("nil")
             }
         }
         
+    }
+    
+    private func loadMoreShows(){
+        pageID = pageID + 1
+        AyiboAPIManager.shared.get(url: "http://bibinetalkole.com/wp-json/wp/v2/posts?page=\(pageID)&categories=20") { (result, error) in
+            
+            if error != nil{
+                let errorAlertController = UIAlertController(title: "On ne peut pas obtenir de données", message: "Les connexions Internet semblent être hors ligne", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Réessayer", style: .cancel)
+                errorAlertController.addAction(cancelAction)
+                self.present(errorAlertController, animated: true)
+                return
+            }
+            if result != nil{
+                do{
+                    for item in result!
+                    {
+                        self.posts.append(item)
+                    }
+                    self.tableView.reloadData() // to tell table about new data
+                }
+            }else{
+                let errorAlertController = UIAlertController(title: "Sorry, No more posts", message: "Up the list", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+                errorAlertController.addAction(cancelAction)
+                self.present(errorAlertController, animated: true)
+            }
+        }
+        
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == posts.count{
+            loadMoreShows()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,25 +136,10 @@ class ShowsViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-    
-    
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
