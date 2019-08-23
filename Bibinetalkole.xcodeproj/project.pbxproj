@@ -13,15 +13,12 @@
 		9635B7CB230C2C8000CF32D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9635B7CA230C2C8000CF32D2 /* Assets.xcassets */; };
 		9635B7CE230C2C8000CF32D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9635B7CC230C2C8000CF32D2 /* LaunchScreen.storyboard */; };
 		9635B7D7230C2D5600CF32D2 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7D6230C2D5600CF32D2 /* FeedsViewController.swift */; };
-		9635B7D9230C2D7600CF32D2 /* ShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7D8230C2D7600CF32D2 /* ShowsViewController.swift */; };
-		9635B7DC230C344D00CF32D2 /* ShowsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7DB230C344C00CF32D2 /* ShowsViewCell.swift */; };
 		9635B7EF230C503600CF32D2 /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7EC230C503300CF32D2 /* HTTPHandler.swift */; };
 		9635B7F0230C503600CF32D2 /* AyiboAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7ED230C503400CF32D2 /* AyiboAPIManager.swift */; };
 		9635B7F1230C503600CF32D2 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7EE230C503500CF32D2 /* Swift+Gif.swift */; };
 		9635B7F4230C5C0C00CF32D2 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7F3230C5C0C00CF32D2 /* Strings.swift */; };
 		965A85082310A360005BADDB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85072310A360005BADDB /* CollectionViewController.swift */; };
 		965A850A2310A4AD005BADDB /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85092310A4AD005BADDB /* ViewCell.swift */; };
-		96F4A7EB230F4A63007E7E69 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4A7EA230F4A63007E7E69 /* PosterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,15 +31,12 @@
 		9635B7CD230C2C8000CF32D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9635B7CF230C2C8000CF32D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9635B7D6230C2D5600CF32D2 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
-		9635B7D8230C2D7600CF32D2 /* ShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewController.swift; sourceTree = "<group>"; };
-		9635B7DB230C344C00CF32D2 /* ShowsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewCell.swift; sourceTree = "<group>"; };
 		9635B7EC230C503300CF32D2 /* HTTPHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPHandler.swift; path = Bibinetalkole/ManagerAPI/HTTPHandler.swift; sourceTree = SOURCE_ROOT; };
 		9635B7ED230C503400CF32D2 /* AyiboAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AyiboAPIManager.swift; path = Bibinetalkole/ManagerAPI/AyiboAPIManager.swift; sourceTree = SOURCE_ROOT; };
 		9635B7EE230C503500CF32D2 /* Swift+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Swift+Gif.swift"; path = "Bibinetalkole/ManagerAPI/Swift+Gif.swift"; sourceTree = SOURCE_ROOT; };
 		9635B7F3230C5C0C00CF32D2 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		965A85072310A360005BADDB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		965A85092310A4AD005BADDB /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
-		96F4A7EA230F4A63007E7E69 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		E236E4EAE70F677BB63C3044 /* Pods-Bibinetalkole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibinetalkole.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bibinetalkole/Pods-Bibinetalkole.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				9635B7D6230C2D5600CF32D2 /* FeedsViewController.swift */,
-				9635B7D8230C2D7600CF32D2 /* ShowsViewController.swift */,
 				965A85072310A360005BADDB /* CollectionViewController.swift */,
 			);
 			path = Controllers;
@@ -113,8 +106,6 @@
 		9635B7DA230C33FB00CF32D2 /* ViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				9635B7DB230C344C00CF32D2 /* ShowsViewCell.swift */,
-				96F4A7EA230F4A63007E7E69 /* PosterCell.swift */,
 				965A85092310A4AD005BADDB /* ViewCell.swift */,
 			);
 			path = ViewCell;
@@ -274,10 +265,7 @@
 				9635B7F0230C503600CF32D2 /* AyiboAPIManager.swift in Sources */,
 				965A850A2310A4AD005BADDB /* ViewCell.swift in Sources */,
 				9635B7F4230C5C0C00CF32D2 /* Strings.swift in Sources */,
-				9635B7D9230C2D7600CF32D2 /* ShowsViewController.swift in Sources */,
 				965A85082310A360005BADDB /* CollectionViewController.swift in Sources */,
-				9635B7DC230C344D00CF32D2 /* ShowsViewCell.swift in Sources */,
-				96F4A7EB230F4A63007E7E69 /* PosterCell.swift in Sources */,
 				9635B7F1230C503600CF32D2 /* Swift+Gif.swift in Sources */,
 				9635B7D7230C2D5600CF32D2 /* FeedsViewController.swift in Sources */,
 				9635B7C2230C2C7C00CF32D2 /* AppDelegate.swift in Sources */,

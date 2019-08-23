@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import Alamofire
+import AlamofireImage
 
 class CollectionViewcontroller: UICollectionViewController {
     
@@ -27,6 +29,8 @@ class CollectionViewcontroller: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "Bibinetalkole"
   /*      if let patternImage = UIImage(named: "Pattern") {
             view.backgroundColor = UIColor(patternImage: patternImage)
         }*/
