@@ -83,13 +83,13 @@
 		9635B7C0230C2C7C00CF32D2 /* Bibinetalkole */ = {
 			isa = PBXGroup;
 			children = (
+				965A84F823105EEB005BADDB /* Assets */,
 				9635B7F2230C5BEC00CF32D2 /* Extensions */,
 				9635B7EB230C4F9100CF32D2 /* ManagerAPI */,
 				9635B7DA230C33FB00CF32D2 /* ViewCell */,
 				9635B7D5230C2D2400CF32D2 /* Controllers */,
 				9635B7C1230C2C7C00CF32D2 /* AppDelegate.swift */,
 				9635B7C7230C2C7C00CF32D2 /* Main.storyboard */,
-				9635B7CA230C2C8000CF32D2 /* Assets.xcassets */,
 				9635B7CC230C2C8000CF32D2 /* LaunchScreen.storyboard */,
 				9635B7CF230C2C8000CF32D2 /* Info.plist */,
 			);
@@ -131,6 +131,14 @@
 				9635B7F3230C5C0C00CF32D2 /* Strings.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		965A84F823105EEB005BADDB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9635B7CA230C2C8000CF32D2 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		D2DCFC20EFDD1CB2104DABBD /* Pods */ = {

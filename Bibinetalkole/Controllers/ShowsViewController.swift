@@ -26,18 +26,25 @@ class ShowsViewController: UIViewController, UICollectionViewDataSource, UIColle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
         
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.minimumInteritemSpacing = 5
-        layout.minimumLineSpacing = layout.minimumInteritemSpacing
-        let cellsPerLine: CGFloat = 2
-        let interItemSpacingTotal = layout.minimumInteritemSpacing * (cellsPerLine - 1)
-        let width = collectionView.frame.size.width / cellsPerLine - interItemSpacingTotal / cellsPerLine
-        layout.itemSize = CGSize(width: width, height: width * 3 / 2)
- 
+        navigationItem.title = "Bibinetalkole"
+        
+      /*  if let patternImage = UIImage(named: "Background") {
+            view.backgroundColor = UIColor(patternImage: patternImage)
+        }
+        */
+    //    collectionView?.backgroundColor = .clear
+        collectionView?.contentInset = UIEdgeInsets(top: 23, left: 16, bottom: 10, right: 16)
+        collectionView.dataSource = self
         fetchShows()
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2
+        return CGSize(width: itemSize, height: itemSize)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return posts.count
     }
@@ -78,8 +85,8 @@ class ShowsViewController: UIViewController, UICollectionViewDataSource, UIColle
                     print(imageURL!)
                     if let imagePath = imageURL,
                         let imgUrl = URL(string:  imagePath){
-                        cell.posterImageView.layer.borderColor = UIColor.white.cgColor
-                        cell.posterImageView.layer.borderWidth = 2.0
+              //          cell.posterImageView.layer.borderColor = UIColor.white.cgColor
+                //        cell.posterImageView.layer.borderWidth = 2.0
                         cell.posterImageView.layer.cornerRadius = 2.0
                         cell.posterImageView.clipsToBounds = true
                         cell.posterImageView.af_setImage(withURL: imgUrl)
@@ -90,7 +97,7 @@ class ShowsViewController: UIViewController, UICollectionViewDataSource, UIColle
             }else{}
         }
         ////
-    //    cell.titleLabel.text = encoded?.stringByDecodingHTMLEntities
+        cell.titleLabel.text = encoded?.stringByDecodingHTMLEntities
         
         return cell
     }
