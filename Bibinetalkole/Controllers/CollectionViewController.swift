@@ -70,7 +70,7 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
         let sizes = (mediaDetails as AnyObject).value(forKey: "sizes")
         
         let encoded = postTitle["rendered"] as? String
-        print(encoded!)
+   //     print(encoded!)
         ////
         do{
             let medium =  (sizes as AnyObject).value(forKey: "medium")
@@ -82,7 +82,7 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
                 ////
                 for images in imgPosts{
                     let imageURL = images["source_url"] as? String
-                    print(imageURL!)
+              //      print(imageURL!)
                     if let imagePath = imageURL,
                         let imgUrl = URL(string:  imagePath){
                         //          cell.posterImageView.layer.borderColor = UIColor.white.cgColor
@@ -122,6 +122,44 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
             }else{
                 print("nil")
             }
+        }
+    }
+    func loadMoreShows(){
+        pageID = pageID + 1
+        AyiboAPIManager.shared.get(url: "http://bibinetalkole.com/wp-json/wp/v2/posts?page=\(pageID)&categories=20&_embed") { (result, error) in
+            if error != nil{
+                let errorAlertController = UIAlertController(title: "Cannot Get Data", message: "The Internet connections appears to be offline", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Retry", style: .cancel)
+                errorAlertController.addAction(cancelAction)
+                self.present(errorAlertController, animated: true)
+                print(error!)
+                
+                return
+            }
+            if result != nil{
+                do{
+                    
+                    for item in result!
+                    {
+                        
+                        self.posts.append(item)
+                        
+                    }
+                    
+                    self.collectionView?.reloadData() // to tell table about new data
+                }
+            }else{
+                let errorAlertController = UIAlertController(title: "End of posts", message: "Please Top up the list", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+                errorAlertController.addAction(cancelAction)
+                self.present(errorAlertController, animated: true)
+            }
+        }
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row + 1 == posts.count{
+            loadMoreShows()
         }
     }
     
