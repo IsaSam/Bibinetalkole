@@ -19,6 +19,8 @@
 		9635B7F0230C503600CF32D2 /* AyiboAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7ED230C503400CF32D2 /* AyiboAPIManager.swift */; };
 		9635B7F1230C503600CF32D2 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7EE230C503500CF32D2 /* Swift+Gif.swift */; };
 		9635B7F4230C5C0C00CF32D2 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7F3230C5C0C00CF32D2 /* Strings.swift */; };
+		965A85082310A360005BADDB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85072310A360005BADDB /* CollectionViewController.swift */; };
+		965A850A2310A4AD005BADDB /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85092310A4AD005BADDB /* ViewCell.swift */; };
 		96F4A7EB230F4A63007E7E69 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4A7EA230F4A63007E7E69 /* PosterCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		9635B7ED230C503400CF32D2 /* AyiboAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AyiboAPIManager.swift; path = Bibinetalkole/ManagerAPI/AyiboAPIManager.swift; sourceTree = SOURCE_ROOT; };
 		9635B7EE230C503500CF32D2 /* Swift+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Swift+Gif.swift"; path = "Bibinetalkole/ManagerAPI/Swift+Gif.swift"; sourceTree = SOURCE_ROOT; };
 		9635B7F3230C5C0C00CF32D2 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		965A85072310A360005BADDB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		965A85092310A4AD005BADDB /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		96F4A7EA230F4A63007E7E69 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		E236E4EAE70F677BB63C3044 /* Pods-Bibinetalkole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibinetalkole.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bibinetalkole/Pods-Bibinetalkole.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +105,7 @@
 			children = (
 				9635B7D6230C2D5600CF32D2 /* FeedsViewController.swift */,
 				9635B7D8230C2D7600CF32D2 /* ShowsViewController.swift */,
+				965A85072310A360005BADDB /* CollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			children = (
 				9635B7DB230C344C00CF32D2 /* ShowsViewCell.swift */,
 				96F4A7EA230F4A63007E7E69 /* PosterCell.swift */,
+				965A85092310A4AD005BADDB /* ViewCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -266,8 +272,10 @@
 			files = (
 				9635B7EF230C503600CF32D2 /* HTTPHandler.swift in Sources */,
 				9635B7F0230C503600CF32D2 /* AyiboAPIManager.swift in Sources */,
+				965A850A2310A4AD005BADDB /* ViewCell.swift in Sources */,
 				9635B7F4230C5C0C00CF32D2 /* Strings.swift in Sources */,
 				9635B7D9230C2D7600CF32D2 /* ShowsViewController.swift in Sources */,
+				965A85082310A360005BADDB /* CollectionViewController.swift in Sources */,
 				9635B7DC230C344D00CF32D2 /* ShowsViewCell.swift in Sources */,
 				96F4A7EB230F4A63007E7E69 /* PosterCell.swift in Sources */,
 				9635B7F1230C503600CF32D2 /* Swift+Gif.swift in Sources */,
