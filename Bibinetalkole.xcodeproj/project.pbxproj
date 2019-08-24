@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3ED933604A7253944F580909 /* Pods_Bibinetalkole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4433105F77DC6F036CCCBA52 /* Pods_Bibinetalkole.framework */; };
 		9635B7C2230C2C7C00CF32D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7C1230C2C7C00CF32D2 /* AppDelegate.swift */; };
 		9635B7C9230C2C7C00CF32D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9635B7C7230C2C7C00CF32D2 /* Main.storyboard */; };
 		9635B7CB230C2C8000CF32D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9635B7CA230C2C8000CF32D2 /* Assets.xcassets */; };
 		9635B7CE230C2C8000CF32D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9635B7CC230C2C8000CF32D2 /* LaunchScreen.storyboard */; };
 		9635B7D7230C2D5600CF32D2 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7D6230C2D5600CF32D2 /* FeedsViewController.swift */; };
-		9635B7D9230C2D7600CF32D2 /* ShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7D8230C2D7600CF32D2 /* ShowsViewController.swift */; };
-		9635B7DC230C344D00CF32D2 /* ShowsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7DB230C344C00CF32D2 /* ShowsViewCell.swift */; };
 		9635B7EF230C503600CF32D2 /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7EC230C503300CF32D2 /* HTTPHandler.swift */; };
 		9635B7F0230C503600CF32D2 /* AyiboAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7ED230C503400CF32D2 /* AyiboAPIManager.swift */; };
 		9635B7F1230C503600CF32D2 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7EE230C503500CF32D2 /* Swift+Gif.swift */; };
 		9635B7F4230C5C0C00CF32D2 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7F3230C5C0C00CF32D2 /* Strings.swift */; };
+		965A85082310A360005BADDB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85072310A360005BADDB /* CollectionViewController.swift */; };
+		965A850A2310A4AD005BADDB /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85092310A4AD005BADDB /* ViewCell.swift */; };
+		965A850C2310DA1E005BADDB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A850B2310DA1E005BADDB /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4433105F77DC6F036CCCBA52 /* Pods_Bibinetalkole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bibinetalkole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		814D4B6BCE957F0861DD24CC /* Pods-Bibinetalkole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibinetalkole.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bibinetalkole/Pods-Bibinetalkole.debug.xcconfig"; sourceTree = "<group>"; };
 		9635B7BE230C2C7C00CF32D2 /* Bibinetalkole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bibinetalkole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9635B7C1230C2C7C00CF32D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9635B7C8230C2C7C00CF32D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,12 +32,14 @@
 		9635B7CD230C2C8000CF32D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9635B7CF230C2C8000CF32D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9635B7D6230C2D5600CF32D2 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
-		9635B7D8230C2D7600CF32D2 /* ShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewController.swift; sourceTree = "<group>"; };
-		9635B7DB230C344C00CF32D2 /* ShowsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewCell.swift; sourceTree = "<group>"; };
 		9635B7EC230C503300CF32D2 /* HTTPHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPHandler.swift; path = Bibinetalkole/ManagerAPI/HTTPHandler.swift; sourceTree = SOURCE_ROOT; };
 		9635B7ED230C503400CF32D2 /* AyiboAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AyiboAPIManager.swift; path = Bibinetalkole/ManagerAPI/AyiboAPIManager.swift; sourceTree = SOURCE_ROOT; };
 		9635B7EE230C503500CF32D2 /* Swift+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Swift+Gif.swift"; path = "Bibinetalkole/ManagerAPI/Swift+Gif.swift"; sourceTree = SOURCE_ROOT; };
 		9635B7F3230C5C0C00CF32D2 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		965A85072310A360005BADDB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		965A85092310A4AD005BADDB /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
+		965A850B2310DA1E005BADDB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		E236E4EAE70F677BB63C3044 /* Pods-Bibinetalkole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibinetalkole.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bibinetalkole/Pods-Bibinetalkole.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED933604A7253944F580909 /* Pods_Bibinetalkole.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		655F4FA8A6122AE03C8AC1A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4433105F77DC6F036CCCBA52 /* Pods_Bibinetalkole.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9635B7B5230C2C7C00CF32D2 = {
 			isa = PBXGroup;
 			children = (
 				9635B7C0230C2C7C00CF32D2 /* Bibinetalkole */,
 				9635B7BF230C2C7C00CF32D2 /* Products */,
+				D2DCFC20EFDD1CB2104DABBD /* Pods */,
+				655F4FA8A6122AE03C8AC1A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,13 +83,13 @@
 		9635B7C0230C2C7C00CF32D2 /* Bibinetalkole */ = {
 			isa = PBXGroup;
 			children = (
+				965A84F823105EEB005BADDB /* Assets */,
 				9635B7F2230C5BEC00CF32D2 /* Extensions */,
 				9635B7EB230C4F9100CF32D2 /* ManagerAPI */,
 				9635B7DA230C33FB00CF32D2 /* ViewCell */,
 				9635B7D5230C2D2400CF32D2 /* Controllers */,
 				9635B7C1230C2C7C00CF32D2 /* AppDelegate.swift */,
 				9635B7C7230C2C7C00CF32D2 /* Main.storyboard */,
-				9635B7CA230C2C8000CF32D2 /* Assets.xcassets */,
 				9635B7CC230C2C8000CF32D2 /* LaunchScreen.storyboard */,
 				9635B7CF230C2C8000CF32D2 /* Info.plist */,
 			);
@@ -83,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				9635B7D6230C2D5600CF32D2 /* FeedsViewController.swift */,
-				9635B7D8230C2D7600CF32D2 /* ShowsViewController.swift */,
+				965A85072310A360005BADDB /* CollectionViewController.swift */,
+				965A850B2310DA1E005BADDB /* DetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -91,7 +109,7 @@
 		9635B7DA230C33FB00CF32D2 /* ViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				9635B7DB230C344C00CF32D2 /* ShowsViewCell.swift */,
+				965A85092310A4AD005BADDB /* ViewCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -115,6 +133,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		965A84F823105EEB005BADDB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9635B7CA230C2C8000CF32D2 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D2DCFC20EFDD1CB2104DABBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				814D4B6BCE957F0861DD24CC /* Pods-Bibinetalkole.debug.xcconfig */,
+				E236E4EAE70F677BB63C3044 /* Pods-Bibinetalkole.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9635B7D2230C2C8000CF32D2 /* Build configuration list for PBXNativeTarget "Bibinetalkole" */;
 			buildPhases = (
+				96B3D47A8DCCACC7319FB7FD /* [CP] Check Pods Manifest.lock */,
 				9635B7BA230C2C7C00CF32D2 /* Sources */,
 				9635B7BB230C2C7C00CF32D2 /* Frameworks */,
 				9635B7BC230C2C7C00CF32D2 /* Resources */,
+				2EB1A94812125FF2AF54AB29 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +218,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2EB1A94812125FF2AF54AB29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bibinetalkole/Pods-Bibinetalkole-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bibinetalkole/Pods-Bibinetalkole-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96B3D47A8DCCACC7319FB7FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bibinetalkole-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9635B7BA230C2C7C00CF32D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -188,9 +266,10 @@
 			files = (
 				9635B7EF230C503600CF32D2 /* HTTPHandler.swift in Sources */,
 				9635B7F0230C503600CF32D2 /* AyiboAPIManager.swift in Sources */,
+				965A850C2310DA1E005BADDB /* DetailsViewController.swift in Sources */,
+				965A850A2310A4AD005BADDB /* ViewCell.swift in Sources */,
 				9635B7F4230C5C0C00CF32D2 /* Strings.swift in Sources */,
-				9635B7D9230C2D7600CF32D2 /* ShowsViewController.swift in Sources */,
-				9635B7DC230C344D00CF32D2 /* ShowsViewCell.swift in Sources */,
+				965A85082310A360005BADDB /* CollectionViewController.swift in Sources */,
 				9635B7F1230C503600CF32D2 /* Swift+Gif.swift in Sources */,
 				9635B7D7230C2D5600CF32D2 /* FeedsViewController.swift in Sources */,
 				9635B7C2230C2C7C00CF32D2 /* AppDelegate.swift in Sources */,
@@ -335,6 +414,7 @@
 		};
 		9635B7D3230C2C8000CF32D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 814D4B6BCE957F0861DD24CC /* Pods-Bibinetalkole.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -353,6 +433,7 @@
 		};
 		9635B7D4230C2C8000CF32D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E236E4EAE70F677BB63C3044 /* Pods-Bibinetalkole.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
