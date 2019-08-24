@@ -35,7 +35,7 @@ class CollectionViewcontroller: UICollectionViewController {
             view.backgroundColor = UIColor(patternImage: patternImage)
         }*/
  //       collectionView?.backgroundColor = .clear
-        collectionView?.contentInset = UIEdgeInsets(top: 23, left: 16, bottom: 10, right: 16)
+        collectionView?.contentInset = UIEdgeInsets(top: 23, left: 8, bottom: 10, right: 8)
         
         collectionView?.dataSource = self
         fetchShows()
@@ -148,8 +148,9 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
                         self.posts.append(item)
                         
                     }
-                    
-                    self.collectionView?.reloadData() // to tell table about new data
+                    DispatchQueue.main.async {
+                        self.collectionView?.reloadData() // to tell table about new data
+                    }
                 }
             }else{
                 let errorAlertController = UIAlertController(title: "End of posts", message: "Please Top up the list", preferredStyle: .alert)
