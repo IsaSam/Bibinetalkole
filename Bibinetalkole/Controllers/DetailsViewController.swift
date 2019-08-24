@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import WebKit
 
 class DetailsViewController: UIViewController {
     @IBOutlet weak var posterImageView: UIImageView!
     
+    @IBOutlet weak var playAudio: WKWebView!
+    
     var post: [String: Any]?
     var postImage: [String: Any]?
+    var postContent: [String: Any]?
+    
+    var urlShows = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         detailShow()
     }
     func detailShow(){
+        //for images
         let imgArray = (postImage as AnyObject).value(forKey: "wp:featuredmedia")
         let mediaDetails = (imgArray as AnyObject).value(forKey: "media_details")
         let sizes = (mediaDetails as AnyObject).value(forKey: "sizes")
@@ -30,7 +37,7 @@ class DetailsViewController: UIViewController {
                 let imgPosts = dataDic!
                 for images in imgPosts{
                     let imageURL = images["source_url"] as? String
-                    print(imageURL!)
+              //      print(imageURL!)
                     if let imagePath = imageURL,
                         let imgUrl = URL(string:  imagePath){
                         posterImageView.layer.borderColor = UIColor.white.cgColor
@@ -44,6 +51,31 @@ class DetailsViewController: UIViewController {
                 }
             }else{}
         }
+        //audio content
+        let htmlTag =  postContent!["rendered"] as! String
+        
+        let html2 = htmlTag.allStringsBetween(start: "iframe src=", end: "/iframe")
+        let input = String(describing: html2)
+        let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+        let matches = detector.matches(in: input, options: [], range: NSRange(location: 0, length: input.utf16.count))
+        for match in matches {
+            guard let range = Range(match.range, in: input) else { continue }
+            let urlYou = input[range]
+            if urlYou != ""{
+                urlShows = String(urlYou)
+                print(urlShows)
+                
+                if let url = URL(string: urlShows) {
+                    let request = URLRequest(url: url)
+                    playAudio.load(request)
+                    playAudio.scrollView.isScrollEnabled = false
+                }
+            }
+            else{
+            }
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

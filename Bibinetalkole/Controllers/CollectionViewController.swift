@@ -55,15 +55,20 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
         do{
             let titleDic = (posts as AnyObject).value(forKey: "title")
             let embedDic = (posts as AnyObject).value(forKey: "_embedded")
+            let contentDic = (posts as AnyObject).value(forKey: "content")
             
             let titleDicString = titleDic as? [[String: Any]]
             let embedDicString = embedDic as? [[String: Any]]
+            let contentDicString = contentDic as? [[String: Any]]
             
             self.postsTitle = titleDicString!
             self.postsEmbed = embedDicString!
+            self.postsContent = contentDicString!
+            
         }
         let postTitle = postsTitle[indexPath.row]
         let postImage = postsEmbed[indexPath.row]
+    //    let postContent = postsContent[indexPath.row]
 
         let imgArray = (postImage as AnyObject).value(forKey: "wp:featuredmedia")
         let mediaDetails = (imgArray as AnyObject).value(forKey: "media_details")
@@ -72,7 +77,7 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
         let encoded = postTitle["rendered"] as? String
         cell.titleLabel.text = encoded?.stringByDecodingHTMLEntities
    //     print(encoded!)
-
+ //       let htmlTag =  postContent["rendered"] as! String
 
         ////
         do{
@@ -177,9 +182,11 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
         let indexPath = collectionView?.indexPath(for: cell)
         let post = posts[(indexPath?.row)!]
         let postImage = postsEmbed[(indexPath?.row)!]
+        let postContent = postsContent[(indexPath?.row)!]
         let detailViewController = segue.destination as! DetailsViewController
         detailViewController.post = post
         detailViewController.postImage = postImage
+        detailViewController.postContent = postContent
         
     }
     

@@ -329,11 +329,26 @@
                                             <constraint firstAttribute="height" constant="286" id="UlA-bP-b30"/>
                                         </constraints>
                                     </imageView>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3E-l2-oWM">
+                                        <rect key="frame" x="0.0" y="294" width="375" height="128"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="nyS-Cp-SN8"/>
+                                            <constraint firstAttribute="height" constant="128" id="xZP-qb-ySy"/>
+                                        </constraints>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ox5-gy-Tat" firstAttribute="top" secondItem="I4i-AW-5do" secondAttribute="top" id="bgq-Be-YIp"/>
                                     <constraint firstAttribute="trailing" secondItem="ox5-gy-Tat" secondAttribute="trailing" id="nMb-X2-rjE"/>
+                                    <constraint firstAttribute="trailing" secondItem="K3E-l2-oWM" secondAttribute="trailing" id="pSo-aE-1iL"/>
+                                    <constraint firstItem="K3E-l2-oWM" firstAttribute="leading" secondItem="I4i-AW-5do" secondAttribute="leading" id="r7N-JP-HSX"/>
+                                    <constraint firstItem="K3E-l2-oWM" firstAttribute="top" secondItem="ox5-gy-Tat" secondAttribute="bottom" constant="8" id="ryh-b7-hMb"/>
                                     <constraint firstItem="ox5-gy-Tat" firstAttribute="leading" secondItem="I4i-AW-5do" secondAttribute="leading" id="tPf-pn-gux"/>
                                 </constraints>
                             </view>
@@ -348,12 +363,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="YXW-Oq-xId"/>
                     <connections>
+                        <outlet property="playAudio" destination="K3E-l2-oWM" id="Fdq-ln-xWF"/>
                         <outlet property="posterImageView" destination="ox5-gy-Tat" id="551-gu-nQF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3x-SI-kJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789.5" y="1979.5"/>
+            <point key="canvasLocation" x="788" y="1979.4602698650676"/>
         </scene>
     </scenes>
     <resources>
