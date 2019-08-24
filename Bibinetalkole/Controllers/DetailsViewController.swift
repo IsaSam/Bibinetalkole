@@ -14,11 +14,13 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var playAudio: WKWebView!
     
+    @IBOutlet weak var contentLabel: UILabel!
     var post: [String: Any]?
     var postImage: [String: Any]?
     var postContent: [String: Any]?
     
     var urlShows = ""
+    var urlShows1 = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +65,7 @@ class DetailsViewController: UIViewController {
             let urlYou = input[range]
             if urlYou != ""{
                 urlShows = String(urlYou)
-                print(urlShows)
+          //      print(urlShows)
                 
                 if let url = URL(string: urlShows) {
                     let request = URLRequest(url: url)
@@ -75,7 +77,22 @@ class DetailsViewController: UIViewController {
             }
         }
         
+        //Content Description
+    
+        let html3 = htmlTag.allStringsBetween(start: "[vc_column_text]", end: "</p>")
+        let input3 = String(describing: html3)
+        let html4 = input3.allStringsBetween(start: "[", end: "&lt;iframe")
+        let input4 = String(describing: html4)
+        print("1----------------------\(input4)")
+        let html5 = input4.replacingOccurrences(of: "[\"\\\"", with: "",
+                                                options: NSString.CompareOptions.literal, range:nil)
+        let content1 = html5.replacingOccurrences(of: "\\\", \\\"\"]", with: "",
+                                                   options: NSString.CompareOptions.literal, range:nil)
+        let content = content1.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        print("==========================\n\(content)")
+        contentLabel.text = content.stringByDecodingHTMLEntities
         
+
     }
 
     override func didReceiveMemoryWarning() {

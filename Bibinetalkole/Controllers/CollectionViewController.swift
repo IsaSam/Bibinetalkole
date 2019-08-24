@@ -30,7 +30,7 @@ class CollectionViewcontroller: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Bibinetalkole"
+        navigationItem.title = "Bibinetalkole Shows"
   /*      if let patternImage = UIImage(named: "Pattern") {
             view.backgroundColor = UIColor(patternImage: patternImage)
         }*/

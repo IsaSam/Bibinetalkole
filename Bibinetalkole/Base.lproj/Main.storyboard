@@ -330,21 +330,34 @@
                                         </constraints>
                                     </imageView>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3E-l2-oWM">
-                                        <rect key="frame" x="0.0" y="294" width="375" height="128"/>
+                                        <rect key="frame" x="0.0" y="294" width="375" height="100"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="nyS-Cp-SN8"/>
-                                            <constraint firstAttribute="height" constant="128" id="xZP-qb-ySy"/>
+                                            <constraint firstAttribute="height" constant="100" id="xZP-qb-ySy"/>
                                         </constraints>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                             <wkPreferences key="preferences"/>
                                         </wkWebViewConfiguration>
                                     </wkWebView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymg-Xu-dWj">
+                                        <rect key="frame" x="8" y="409" width="359" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="kGo-sF-Fnq"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="mMS-03-6qb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.074509803921568626" green="0.047058823529411764" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="ox5-gy-Tat" firstAttribute="top" secondItem="I4i-AW-5do" secondAttribute="top" id="bgq-Be-YIp"/>
+                                    <constraint firstItem="Ymg-Xu-dWj" firstAttribute="leading" secondItem="I4i-AW-5do" secondAttribute="leading" constant="8" id="dDC-H1-dIb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ymg-Xu-dWj" secondAttribute="trailing" constant="8" id="euD-hQ-Xy8"/>
+                                    <constraint firstItem="Ymg-Xu-dWj" firstAttribute="top" secondItem="K3E-l2-oWM" secondAttribute="bottom" constant="15" id="hRu-E5-AXw"/>
                                     <constraint firstAttribute="trailing" secondItem="ox5-gy-Tat" secondAttribute="trailing" id="nMb-X2-rjE"/>
                                     <constraint firstAttribute="trailing" secondItem="K3E-l2-oWM" secondAttribute="trailing" id="pSo-aE-1iL"/>
                                     <constraint firstItem="K3E-l2-oWM" firstAttribute="leading" secondItem="I4i-AW-5do" secondAttribute="leading" id="r7N-JP-HSX"/>
@@ -363,6 +376,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YXW-Oq-xId"/>
                     <connections>
+                        <outlet property="contentLabel" destination="Ymg-Xu-dWj" id="2kM-9u-zwb"/>
                         <outlet property="playAudio" destination="K3E-l2-oWM" id="Fdq-ln-xWF"/>
                         <outlet property="posterImageView" destination="ox5-gy-Tat" id="551-gu-nQF"/>
                     </connections>
