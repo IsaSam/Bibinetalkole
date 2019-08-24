@@ -19,6 +19,7 @@
 		9635B7F4230C5C0C00CF32D2 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7F3230C5C0C00CF32D2 /* Strings.swift */; };
 		965A85082310A360005BADDB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85072310A360005BADDB /* CollectionViewController.swift */; };
 		965A850A2310A4AD005BADDB /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85092310A4AD005BADDB /* ViewCell.swift */; };
+		965A850C2310DA1E005BADDB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A850B2310DA1E005BADDB /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		9635B7F3230C5C0C00CF32D2 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		965A85072310A360005BADDB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		965A85092310A4AD005BADDB /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
+		965A850B2310DA1E005BADDB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		E236E4EAE70F677BB63C3044 /* Pods-Bibinetalkole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibinetalkole.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bibinetalkole/Pods-Bibinetalkole.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 			children = (
 				9635B7D6230C2D5600CF32D2 /* FeedsViewController.swift */,
 				965A85072310A360005BADDB /* CollectionViewController.swift */,
+				965A850B2310DA1E005BADDB /* DetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				9635B7EF230C503600CF32D2 /* HTTPHandler.swift in Sources */,
 				9635B7F0230C503600CF32D2 /* AyiboAPIManager.swift in Sources */,
+				965A850C2310DA1E005BADDB /* DetailsViewController.swift in Sources */,
 				965A850A2310A4AD005BADDB /* ViewCell.swift in Sources */,
 				9635B7F4230C5C0C00CF32D2 /* Strings.swift in Sources */,
 				965A85082310A360005BADDB /* CollectionViewController.swift in Sources */,

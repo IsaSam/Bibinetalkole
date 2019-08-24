@@ -172,4 +172,15 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
         return CGSize(width: itemSize, height: itemSize+40)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView?.indexPath(for: cell)
+        let post = posts[(indexPath?.row)!]
+        let postImage = postsEmbed[(indexPath?.row)!]
+        let detailViewController = segue.destination as! DetailsViewController
+        detailViewController.post = post
+        detailViewController.postImage = postImage
+        
+    }
+    
 }
