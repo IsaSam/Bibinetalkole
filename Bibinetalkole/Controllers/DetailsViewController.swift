@@ -83,16 +83,18 @@ class DetailsViewController: UIViewController {
         let input3 = String(describing: html3)
         let html4 = input3.allStringsBetween(start: "[", end: "&lt;iframe")
         let input4 = String(describing: html4)
-        print("1----------------------\(input4)")
         let html5 = input4.replacingOccurrences(of: "[\"\\\"", with: "",
                                                 options: NSString.CompareOptions.literal, range:nil)
         let content1 = html5.replacingOccurrences(of: "\\\", \\\"\"]", with: "",
                                                    options: NSString.CompareOptions.literal, range:nil)
         let content = content1.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
-        print("==========================\n\(content)")
-        contentLabel.text = content.stringByDecodingHTMLEntities
-        
-
+  //      print("==========================\n\(content)")
+        if content != "[]"{
+            contentLabel.text = content.stringByDecodingHTMLEntities
+        }
+        else{
+            contentLabel.text = ""
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -62,7 +62,7 @@
         <scene sceneID="3lx-6K-VCG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TdO-O4-1eF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feeds" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Feeds" image="icons8-show-property-30" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="K5P-sn-1XU">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -138,11 +138,11 @@
             </objects>
             <point key="canvasLocation" x="3081" y="-278"/>
         </scene>
-        <!--About-->
+        <!--About us-->
         <scene sceneID="Sth-8u-Atv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="07A-lG-pt5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" id="00n-bA-i0Y"/>
+                    <tabBarItem key="tabBarItem" title="About us" image="icons8-contact-us-24" id="00n-bA-i0Y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xDc-KM-nx9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -161,7 +161,7 @@
         <scene sceneID="Lxf-od-ent">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b29-5P-dvh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Albums" id="lL1-qE-lf7"/>
+                    <tabBarItem key="tabBarItem" title="Albums" image="icons8-music-album-30" id="lL1-qE-lf7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qT0-IA-5ET">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -176,11 +176,11 @@
             </objects>
             <point key="canvasLocation" x="2095" y="-277"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Search-->
         <scene sceneID="Htb-un-eIX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sUd-wQ-Shd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="ouY-IF-62B"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="icons8-search-26" id="ouY-IF-62B"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="NkF-Jh-Y1l">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -285,7 +285,7 @@
         <scene sceneID="ffk-1O-gwy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fci-FI-duH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shows" id="zXe-xN-6Se">
+                    <tabBarItem key="tabBarItem" title="Shows" image="icons8-browse-podcasts-30" id="zXe-xN-6Se">
                         <color key="badgeColor" red="0.17017564339999999" green="0.1099434945" blue="0.45757331169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -387,6 +387,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="icons8-browse-podcasts-30" width="30" height="30"/>
+        <image name="icons8-contact-us-24" width="24" height="24"/>
+        <image name="icons8-music-album-30" width="30" height="30"/>
+        <image name="icons8-search-26" width="26" height="26"/>
+        <image name="icons8-show-property-30" width="30" height="30"/>
     </resources>
 </document>
