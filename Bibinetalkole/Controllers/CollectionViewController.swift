@@ -64,13 +64,16 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
         }
         let postTitle = postsTitle[indexPath.row]
         let postImage = postsEmbed[indexPath.row]
-        
+
         let imgArray = (postImage as AnyObject).value(forKey: "wp:featuredmedia")
         let mediaDetails = (imgArray as AnyObject).value(forKey: "media_details")
         let sizes = (mediaDetails as AnyObject).value(forKey: "sizes")
         
         let encoded = postTitle["rendered"] as? String
+        cell.titleLabel.text = encoded?.stringByDecodingHTMLEntities
    //     print(encoded!)
+
+
         ////
         do{
             let medium =  (sizes as AnyObject).value(forKey: "medium")
@@ -97,7 +100,7 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
             }else{}
         }
         ////
-        cell.titleLabel.text = encoded?.stringByDecodingHTMLEntities
+
         
         return cell
     }

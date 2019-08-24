@@ -218,18 +218,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5kB-0p-7jO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="127"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="143.5"/>
                                                     <color key="backgroundColor" red="0.047143883999999997" green="0.36116248369999998" blue="0.163305968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP9-H1-B0c">
-                                                    <rect key="frame" x="4" y="137" width="172" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Caption" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP9-H1-B0c">
+                                                    <rect key="frame" x="4" y="153.5" width="172" height="16.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16.5" id="PkC-mf-neG"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="yam-OZ-jQI"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Comment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz0-0t-BVB">
-                                                    <rect key="frame" x="4" y="156" width="172" height="14"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -239,10 +237,7 @@
                                                 <constraint firstItem="nP9-H1-B0c" firstAttribute="leading" secondItem="JcC-x5-ngN" secondAttribute="leading" constant="4" id="7dt-1k-bSa"/>
                                                 <constraint firstItem="5kB-0p-7jO" firstAttribute="top" secondItem="JcC-x5-ngN" secondAttribute="top" id="7kQ-LL-f7v"/>
                                                 <constraint firstItem="5kB-0p-7jO" firstAttribute="leading" secondItem="JcC-x5-ngN" secondAttribute="leading" id="GKH-Qj-06r"/>
-                                                <constraint firstItem="Rz0-0t-BVB" firstAttribute="leading" secondItem="JcC-x5-ngN" secondAttribute="leading" constant="4" id="RPS-aT-jeh"/>
-                                                <constraint firstAttribute="trailing" secondItem="Rz0-0t-BVB" secondAttribute="trailing" constant="4" id="YbJ-bL-QsY"/>
-                                                <constraint firstAttribute="bottom" secondItem="Rz0-0t-BVB" secondAttribute="bottom" constant="10" id="a95-7X-Flt"/>
-                                                <constraint firstItem="Rz0-0t-BVB" firstAttribute="top" secondItem="nP9-H1-B0c" secondAttribute="bottom" constant="2" id="bvp-T2-eFB"/>
+                                                <constraint firstAttribute="bottom" secondItem="nP9-H1-B0c" secondAttribute="bottom" constant="10" id="b2u-LI-kKt"/>
                                                 <constraint firstAttribute="trailing" secondItem="nP9-H1-B0c" secondAttribute="trailing" constant="4" id="fzh-Lf-qc5"/>
                                                 <constraint firstAttribute="trailing" secondItem="5kB-0p-7jO" secondAttribute="trailing" id="lqO-fQ-RqU"/>
                                                 <constraint firstItem="nP9-H1-B0c" firstAttribute="top" secondItem="5kB-0p-7jO" secondAttribute="bottom" constant="10" id="uiA-Fj-mjK"/>
@@ -263,7 +258,6 @@
                                 </constraints>
                                 <size key="customSize" width="180" height="180"/>
                                 <connections>
-                                    <outlet property="contentLabel" destination="Rz0-0t-BVB" id="1ta-c9-Sfv"/>
                                     <outlet property="posterImageView" destination="5kB-0p-7jO" id="DhM-BZ-XcP"/>
                                     <outlet property="titleLabel" destination="nP9-H1-B0c" id="blW-fc-tGT"/>
                                 </connections>
