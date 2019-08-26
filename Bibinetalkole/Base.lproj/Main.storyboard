@@ -40,25 +40,32 @@
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="ids-0y-NAX"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ik9-W0-mpa">
-                                                    <rect key="frame" x="16" y="244.66666666666663" width="382" height="25"/>
+                                                <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient2" translatesAutoresizingMaskIntoConstraints="NO" id="gVm-rf-ySf">
+                                                    <rect key="frame" x="0.0" y="195" width="414" height="85"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ik9-W0-mpa">
+                                                    <rect key="frame" x="16" y="246.66666666666663" width="382" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="47" id="5d7-XQ-qxN"/>
                                                         <constraint firstAttribute="height" constant="25" id="W1b-5N-RQV"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-zf-7v6">
-                                                    <rect key="frame" x="16" y="207" width="382" height="29"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-zf-7v6">
+                                                    <rect key="frame" x="16" y="212.66666666666666" width="382" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="382" id="mJN-H1-IcP"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="on1-w3-FC7"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="22"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="19"/>
+                                                    <color key="textColor" red="0.97227032230640986" green="0.97920274172980748" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.16862745100000001" green="0.10980392160000001" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="-2" height="-1"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -68,10 +75,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="ik9-W0-mpa" secondAttribute="trailing" constant="16" id="82T-qE-BMM"/>
                                                 <constraint firstItem="RLw-zf-7v6" firstAttribute="leading" secondItem="Vcw-YR-JL6" secondAttribute="leading" constant="16" id="OqF-81-ue5"/>
                                                 <constraint firstAttribute="trailing" secondItem="IwR-T3-xhT" secondAttribute="trailing" id="XtZ-UI-c2A"/>
-                                                <constraint firstItem="ik9-W0-mpa" firstAttribute="top" secondItem="RLw-zf-7v6" secondAttribute="bottom" constant="8" id="eey-DO-zgN"/>
+                                                <constraint firstItem="ik9-W0-mpa" firstAttribute="top" secondItem="RLw-zf-7v6" secondAttribute="bottom" constant="5" id="eey-DO-zgN"/>
                                                 <constraint firstItem="IwR-T3-xhT" firstAttribute="top" secondItem="Vcw-YR-JL6" secondAttribute="top" id="fFX-tj-cDB"/>
-                                                <constraint firstAttribute="bottom" secondItem="ik9-W0-mpa" secondAttribute="bottom" constant="10" id="muW-Xy-ged"/>
-                                                <constraint firstItem="ik9-W0-mpa" firstAttribute="top" secondItem="RLw-zf-7v6" secondAttribute="bottom" constant="8" id="pnw-yr-GuF"/>
+                                                <constraint firstAttribute="bottom" secondItem="ik9-W0-mpa" secondAttribute="bottom" constant="8" id="muW-Xy-ged"/>
+                                                <constraint firstItem="ik9-W0-mpa" firstAttribute="top" secondItem="RLw-zf-7v6" secondAttribute="bottom" constant="5" id="pnw-yr-GuF"/>
                                                 <constraint firstAttribute="bottom" secondItem="IwR-T3-xhT" secondAttribute="bottom" id="yrR-vZ-ztV"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -129,7 +136,9 @@
         <scene sceneID="3lx-6K-VCG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TdO-O4-1eF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feeds" image="icons8-show-property-30" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Feeds" image="icons8-show-property-30" id="acW-dT-cKf">
+                        <color key="badgeColor" red="0.20784313730000001" green="0.0" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="K5P-sn-1XU">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -247,7 +256,9 @@
         <scene sceneID="Htb-un-eIX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sUd-wQ-Shd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="icons8-search-26" id="ouY-IF-62B"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="icons8-search-26" id="ouY-IF-62B">
+                        <color key="badgeColor" red="0.20784313725490197" green="0.0" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="NkF-Jh-Y1l">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -353,7 +364,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fci-FI-duH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Shows" image="icons8-browse-podcasts-30" id="zXe-xN-6Se">
-                        <color key="badgeColor" red="0.17017564339999999" green="0.1099434945" blue="0.45757331169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="badgeColor" red="0.16862745098039217" green="0.10980392156862745" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="GUm-Lu-w6t">
@@ -454,6 +465,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gradient2" width="1440" height="900"/>
         <image name="icons8-browse-podcasts-30" width="30" height="30"/>
         <image name="icons8-contact-us-24" width="24" height="24"/>
         <image name="icons8-music-album-30" width="30" height="30"/>
