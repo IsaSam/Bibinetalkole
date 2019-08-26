@@ -12,7 +12,7 @@
         <!--Feeds View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FeedsViewController" customModule="Bibinetalkole" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="feeds" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" customClass="FeedsViewController" customModule="Bibinetalkole" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FM7-DG-wtX"/>
                         <viewControllerLayoutGuide type="bottom" id="s40-5N-Ele"/>
@@ -95,6 +95,7 @@
                                             <outlet property="dateFeeds" destination="ik9-W0-mpa" id="TPm-rn-2Bx"/>
                                             <outlet property="imageFeeds" destination="IwR-T3-xhT" id="O05-5c-cMn"/>
                                             <outlet property="titleFeeds" destination="RLw-zf-7v6" id="3da-Yg-x3I"/>
+                                            <segue destination="hd1-I4-Q2L" kind="show" id="67Y-yo-jW3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -291,7 +292,7 @@
         <!--Bibinetalkole Shows-->
         <scene sceneID="A0W-78-H6n">
             <objects>
-                <collectionViewController id="zzX-zZ-0h4" customClass="CollectionViewcontroller" customModule="Bibinetalkole" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="collectionView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zzX-zZ-0h4" customClass="CollectionViewcontroller" customModule="Bibinetalkole" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wmN-sp-DiW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -398,7 +399,7 @@
         <!--Details View Controller-->
         <scene sceneID="VjJ-0O-hIQ">
             <objects>
-                <viewController id="hd1-I4-Q2L" customClass="DetailsViewController" customModule="Bibinetalkole" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="hd1-I4-Q2L" customClass="DetailsViewController" customModule="Bibinetalkole" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yvj-Xy-sCD"/>
                         <viewControllerLayoutGuide type="bottom" id="kVh-Yc-ZCi"/>
@@ -418,15 +419,15 @@
                                             <constraint firstAttribute="height" constant="286" id="UlA-bP-b30"/>
                                         </constraints>
                                     </imageView>
-                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3E-l2-oWM">
+                                    <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3E-l2-oWM">
                                         <rect key="frame" x="0.0" y="294" width="414" height="100"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.090196078431372548" green="0.011764705882352941" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="nyS-Cp-SN8"/>
                                             <constraint firstAttribute="height" constant="100" id="xZP-qb-ySy"/>
                                         </constraints>
-                                        <wkWebViewConfiguration key="configuration">
-                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                        <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES"/>
                                             <wkPreferences key="preferences"/>
                                         </wkWebViewConfiguration>
                                     </wkWebView>
@@ -440,9 +441,21 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Sw5-CS-EFN">
+                                        <rect key="frame" x="197" y="334" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="bE5-3H-aBN"/>
+                                            <constraint firstAttribute="width" constant="20" id="cGY-1Z-lhq"/>
+                                        </constraints>
+                                        <color key="color" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.047058823529411764" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Sw5-CS-EFN" firstAttribute="top" secondItem="ox5-gy-Tat" secondAttribute="bottom" constant="48" id="ELK-kC-UjW"/>
+                                    <constraint firstItem="Sw5-CS-EFN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4i-AW-5do" secondAttribute="leading" constant="197" id="NYx-rV-m95"/>
+                                    <constraint firstItem="Sw5-CS-EFN" firstAttribute="centerX" secondItem="I4i-AW-5do" secondAttribute="centerX" id="W30-PZ-gDH"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Sw5-CS-EFN" secondAttribute="trailing" constant="197" id="bLf-UG-pyI"/>
                                     <constraint firstItem="ox5-gy-Tat" firstAttribute="top" secondItem="I4i-AW-5do" secondAttribute="top" id="bgq-Be-YIp"/>
                                     <constraint firstItem="Ymg-Xu-dWj" firstAttribute="leading" secondItem="I4i-AW-5do" secondAttribute="leading" constant="8" id="dDC-H1-dIb"/>
                                     <constraint firstAttribute="trailing" secondItem="Ymg-Xu-dWj" secondAttribute="trailing" constant="8" id="euD-hQ-Xy8"/>
@@ -465,6 +478,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YXW-Oq-xId"/>
                     <connections>
+                        <outlet property="Activity" destination="Sw5-CS-EFN" id="glm-b6-UmV"/>
                         <outlet property="contentLabel" destination="Ymg-Xu-dWj" id="2kM-9u-zwb"/>
                         <outlet property="playAudio" destination="K3E-l2-oWM" id="Fdq-ln-xWF"/>
                         <outlet property="posterImageView" destination="ox5-gy-Tat" id="551-gu-nQF"/>
@@ -484,4 +498,7 @@
         <image name="icons8-search-26" width="26" height="26"/>
         <image name="icons8-show-property-30" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="67Y-yo-jW3"/>
+    </inferredMetricsTieBreakers>
 </document>

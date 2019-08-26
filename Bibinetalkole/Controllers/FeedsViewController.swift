@@ -191,6 +191,19 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = tableViewFeeds?.indexPath(for: cell)
+        let post = posts[(indexPath?.row)!]
+        let postImage = postsEmbed[(indexPath?.row)!]
+        let postContent = postsContent[(indexPath?.row)!]
+        let detailViewController = segue.destination as! DetailsViewController
+        detailViewController.post = post
+        detailViewController.postImage = postImage
+        detailViewController.postContent = postContent
+    }
+    
+    
     
     
 }

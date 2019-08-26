@@ -12,6 +12,7 @@ import WebKit
 class DetailsViewController: UIViewController {
     @IBOutlet weak var posterImageView: UIImageView!
     
+    @IBOutlet weak var Activity: UIActivityIndicatorView!
     @IBOutlet weak var playAudio: WKWebView!
     
     @IBOutlet weak var contentLabel: UILabel!
@@ -25,7 +26,31 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         detailShow()
+        playAudio.isOpaque = false
     }
+    func showActivityIndicator(show: Bool) {
+        if show {
+            Activity.startAnimating()
+        } else {
+            Activity.stopAnimating()
+        }
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation:
+        WKNavigation!) {
+        showActivityIndicator(show: false)
+    }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation
+        navigation: WKNavigation!) {
+        showActivityIndicator(show: true)
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation:
+        WKNavigation!, withError error: Error) {
+        showActivityIndicator(show: false)
+    }
+    
     func detailShow(){
         //for images
         let imgArray = (postImage as AnyObject).value(forKey: "wp:featuredmedia")
@@ -42,10 +67,10 @@ class DetailsViewController: UIViewController {
               //      print(imageURL!)
                     if let imagePath = imageURL,
                         let imgUrl = URL(string:  imagePath){
-                        posterImageView.layer.borderColor = UIColor.white.cgColor
-                        posterImageView.layer.borderWidth = 2.0
-                        posterImageView.layer.cornerRadius = 10.0
-                        posterImageView.clipsToBounds = true
+                     //   posterImageView.layer.borderColor = UIColor.white.cgColor
+                    //    posterImageView.layer.borderWidth = 2.0
+                      //  posterImageView.layer.cornerRadius = 10.0
+                  //      posterImageView.clipsToBounds = true
                         posterImageView.af_setImage(withURL: imgUrl)
                     }
                     else{
@@ -65,11 +90,14 @@ class DetailsViewController: UIViewController {
             let urlYou = input[range]
             if urlYou != ""{
                 urlShows = String(urlYou)
-          //      print(urlShows)
+                print(urlShows)
                 
                 if let url = URL(string: urlShows) {
+                    print("ok")
                     let request = URLRequest(url: url)
+                    print(request)
                     playAudio.load(request)
+                    playAudio.navigationDelegate = self as? WKNavigationDelegate
                     playAudio.scrollView.isScrollEnabled = false
                 }
             }
@@ -96,6 +124,10 @@ class DetailsViewController: UIViewController {
             contentLabel.text = ""
         }
     }
+   /* func webViewDidFinishLoad(_ : WKWebView) {
+        Activity.stopAnimating()
+        Activity.isHidden = true
+    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
