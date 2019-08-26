@@ -19,8 +19,9 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     var postsEmbed: [[String: Any]] = []
     var imgPosts: [[String: Any]] = []
     var imgURLShare: String?
-    
     var urlShows = ""
+    var convertedDate: String = ""
+    var convertedTime: String = ""
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -111,6 +112,7 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewFeeds.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! FeedCell
+        let post = posts[indexPath.row]
         do{
             let titleDic = (posts as AnyObject).value(forKey: "title")
             let embedDic = (posts as AnyObject).value(forKey: "_embedded")
@@ -164,6 +166,29 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
                 }
             }else{}
         }
+        //date format conversion
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let newDateFormatter = DateFormatter()
+        //        newDateFormatter.dateFormat = "MMM dd, yyyy"
+        newDateFormatter.dateFormat = "dd MMM, yyyy"
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH-mm-ss"
+        let newTimeFormatter = DateFormatter()
+        newTimeFormatter.dateFormat = "h:mm a"
+        
+        let dateTime = post["date"] as? String
+        
+        let dateComponents = dateTime?.components(separatedBy: "T")
+        let splitDate = dateComponents![0]
+        let splitTime = dateComponents![1]
+        if let date = dateFormatter.date(from: splitDate) {
+            convertedDate = newDateFormatter.string(from: date)
+        }
+        if let time = timeFormatter.date(from: splitTime){
+            convertedTime = newTimeFormatter.string(from: time)
+        }
+        cell.dateFeeds.text = convertedDate
         
         return cell
     }
