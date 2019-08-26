@@ -441,9 +441,21 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Sw5-CS-EFN">
+                                        <rect key="frame" x="197" y="334" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="bE5-3H-aBN"/>
+                                            <constraint firstAttribute="width" constant="20" id="cGY-1Z-lhq"/>
+                                        </constraints>
+                                        <color key="color" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.047058823529411764" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Sw5-CS-EFN" firstAttribute="top" secondItem="ox5-gy-Tat" secondAttribute="bottom" constant="48" id="ELK-kC-UjW"/>
+                                    <constraint firstItem="Sw5-CS-EFN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4i-AW-5do" secondAttribute="leading" constant="197" id="NYx-rV-m95"/>
+                                    <constraint firstItem="Sw5-CS-EFN" firstAttribute="centerX" secondItem="I4i-AW-5do" secondAttribute="centerX" id="W30-PZ-gDH"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Sw5-CS-EFN" secondAttribute="trailing" constant="197" id="bLf-UG-pyI"/>
                                     <constraint firstItem="ox5-gy-Tat" firstAttribute="top" secondItem="I4i-AW-5do" secondAttribute="top" id="bgq-Be-YIp"/>
                                     <constraint firstItem="Ymg-Xu-dWj" firstAttribute="leading" secondItem="I4i-AW-5do" secondAttribute="leading" constant="8" id="dDC-H1-dIb"/>
                                     <constraint firstAttribute="trailing" secondItem="Ymg-Xu-dWj" secondAttribute="trailing" constant="8" id="euD-hQ-Xy8"/>
@@ -466,6 +478,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YXW-Oq-xId"/>
                     <connections>
+                        <outlet property="Activity" destination="Sw5-CS-EFN" id="glm-b6-UmV"/>
                         <outlet property="contentLabel" destination="Ymg-Xu-dWj" id="2kM-9u-zwb"/>
                         <outlet property="playAudio" destination="K3E-l2-oWM" id="Fdq-ln-xWF"/>
                         <outlet property="posterImageView" destination="ox5-gy-Tat" id="551-gu-nQF"/>
