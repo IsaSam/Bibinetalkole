@@ -35,8 +35,6 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableViewFeeds.rowHeight = 280
         tableViewFeeds.estimatedRowHeight = 300
         tableViewFeeds.dataSource = self
-        
-        
         //   self.view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
     }

@@ -67,6 +67,13 @@
                                                     <color key="shadowColor" red="0.16862745100000001" green="0.10980392160000001" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <size key="shadowOffset" width="-2" height="-1"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_share-icon_64" translatesAutoresizingMaskIntoConstraints="NO" id="Gx5-MH-R0H">
+                                                    <rect key="frame" x="354" y="8" width="52" height="52"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="52" id="07l-JL-wRn"/>
+                                                        <constraint firstAttribute="width" constant="52" id="ArB-7K-iGa"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ik9-W0-mpa" firstAttribute="leading" secondItem="Vcw-YR-JL6" secondAttribute="leading" constant="16" id="09c-wG-1bO"/>
@@ -74,7 +81,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="RLw-zf-7v6" secondAttribute="trailing" constant="16" id="6VK-VP-L1n"/>
                                                 <constraint firstAttribute="trailing" secondItem="ik9-W0-mpa" secondAttribute="trailing" constant="16" id="82T-qE-BMM"/>
                                                 <constraint firstItem="RLw-zf-7v6" firstAttribute="leading" secondItem="Vcw-YR-JL6" secondAttribute="leading" constant="16" id="OqF-81-ue5"/>
+                                                <constraint firstItem="Gx5-MH-R0H" firstAttribute="top" secondItem="Vcw-YR-JL6" secondAttribute="top" constant="8" id="PGj-bR-vOn"/>
                                                 <constraint firstAttribute="trailing" secondItem="IwR-T3-xhT" secondAttribute="trailing" id="XtZ-UI-c2A"/>
+                                                <constraint firstAttribute="trailing" secondItem="Gx5-MH-R0H" secondAttribute="trailing" constant="8" id="b3i-nz-E91"/>
                                                 <constraint firstItem="ik9-W0-mpa" firstAttribute="top" secondItem="RLw-zf-7v6" secondAttribute="bottom" constant="5" id="eey-DO-zgN"/>
                                                 <constraint firstItem="IwR-T3-xhT" firstAttribute="top" secondItem="Vcw-YR-JL6" secondAttribute="top" id="fFX-tj-cDB"/>
                                                 <constraint firstAttribute="bottom" secondItem="ik9-W0-mpa" secondAttribute="bottom" constant="8" id="muW-Xy-ged"/>
@@ -466,6 +475,7 @@
     </scenes>
     <resources>
         <image name="gradient2" width="1440" height="900"/>
+        <image name="iconfinder_share-icon_64" width="64" height="64"/>
         <image name="icons8-browse-podcasts-30" width="30" height="30"/>
         <image name="icons8-contact-us-24" width="24" height="24"/>
         <image name="icons8-music-album-30" width="30" height="30"/>

@@ -13,6 +13,7 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var imageFeeds: UIImageView!
     @IBOutlet weak var titleFeeds: UILabel!
     @IBOutlet weak var dateFeeds: UILabel!
+    @IBOutlet weak var imageBackShare: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
