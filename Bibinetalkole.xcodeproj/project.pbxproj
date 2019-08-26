@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3ED933604A7253944F580909 /* Pods_Bibinetalkole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4433105F77DC6F036CCCBA52 /* Pods_Bibinetalkole.framework */; };
+		962DE4562313749E009CD9BB /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DE4552313749E009CD9BB /* FeedCell.swift */; };
 		9635B7C2230C2C7C00CF32D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7C1230C2C7C00CF32D2 /* AppDelegate.swift */; };
 		9635B7C9230C2C7C00CF32D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9635B7C7230C2C7C00CF32D2 /* Main.storyboard */; };
 		9635B7CB230C2C8000CF32D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9635B7CA230C2C8000CF32D2 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		4433105F77DC6F036CCCBA52 /* Pods_Bibinetalkole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bibinetalkole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		814D4B6BCE957F0861DD24CC /* Pods-Bibinetalkole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibinetalkole.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bibinetalkole/Pods-Bibinetalkole.debug.xcconfig"; sourceTree = "<group>"; };
+		962DE4552313749E009CD9BB /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		9635B7BE230C2C7C00CF32D2 /* Bibinetalkole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bibinetalkole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9635B7C1230C2C7C00CF32D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9635B7C8230C2C7C00CF32D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				965A85092310A4AD005BADDB /* ViewCell.swift */,
+				962DE4552313749E009CD9BB /* FeedCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9635B7EF230C503600CF32D2 /* HTTPHandler.swift in Sources */,
+				962DE4562313749E009CD9BB /* FeedCell.swift in Sources */,
 				9635B7F0230C503600CF32D2 /* AyiboAPIManager.swift in Sources */,
 				965A850C2310DA1E005BADDB /* DetailsViewController.swift in Sources */,
 				965A850A2310A4AD005BADDB /* ViewCell.swift in Sources */,
