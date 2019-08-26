@@ -25,6 +25,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         detailShow()
+        playAudio.isOpaque = false
     }
     func detailShow(){
         //for images
@@ -42,10 +43,10 @@ class DetailsViewController: UIViewController {
               //      print(imageURL!)
                     if let imagePath = imageURL,
                         let imgUrl = URL(string:  imagePath){
-                        posterImageView.layer.borderColor = UIColor.white.cgColor
-                        posterImageView.layer.borderWidth = 2.0
-                        posterImageView.layer.cornerRadius = 10.0
-                        posterImageView.clipsToBounds = true
+                     //   posterImageView.layer.borderColor = UIColor.white.cgColor
+                    //    posterImageView.layer.borderWidth = 2.0
+                      //  posterImageView.layer.cornerRadius = 10.0
+                  //      posterImageView.clipsToBounds = true
                         posterImageView.af_setImage(withURL: imgUrl)
                     }
                     else{
