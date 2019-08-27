@@ -167,6 +167,14 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
     }
 
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+         // animation 2
+         cell.alpha = 0
+         UIView.animate(withDuration: 1.5){
+         cell.alpha = 1.0
+         }
+        
+        
         if indexPath.row + 1 == posts.count{
             loadMoreShows()
         }
