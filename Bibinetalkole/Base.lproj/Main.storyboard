@@ -67,31 +67,37 @@
                                                     <color key="shadowColor" red="0.16862745100000001" green="0.10980392160000001" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <size key="shadowOffset" width="-2" height="-1"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_share-icon_64" translatesAutoresizingMaskIntoConstraints="NO" id="Gx5-MH-R0H">
+                                                <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeU-rb-Nl1">
                                                     <rect key="frame" x="354" y="8" width="52" height="52"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="52" id="07l-JL-wRn"/>
-                                                        <constraint firstAttribute="width" constant="52" id="ArB-7K-iGa"/>
+                                                        <constraint firstAttribute="width" constant="52" id="DUk-fu-Fug"/>
+                                                        <constraint firstAttribute="height" constant="52" id="gcn-dk-cXd"/>
                                                     </constraints>
-                                                </imageView>
+                                                    <state key="normal" image="iconfinder_share-icon_64"/>
+                                                    <connections>
+                                                        <action selector="btnSharePosts:" destination="9pv-A4-QxB" eventType="touchUpInside" id="XuY-Hf-4jP"/>
+                                                        <action selector="shareTapped:" destination="vGf-hu-Ych" eventType="touchUpInside" id="wSW-dN-lf6"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ik9-W0-mpa" firstAttribute="leading" secondItem="Vcw-YR-JL6" secondAttribute="leading" constant="16" id="09c-wG-1bO"/>
                                                 <constraint firstItem="IwR-T3-xhT" firstAttribute="leading" secondItem="Vcw-YR-JL6" secondAttribute="leading" id="30y-Bb-tml"/>
                                                 <constraint firstAttribute="trailing" secondItem="RLw-zf-7v6" secondAttribute="trailing" constant="16" id="6VK-VP-L1n"/>
+                                                <constraint firstAttribute="trailing" secondItem="oeU-rb-Nl1" secondAttribute="trailing" constant="8" id="6e3-ts-rts"/>
                                                 <constraint firstAttribute="trailing" secondItem="ik9-W0-mpa" secondAttribute="trailing" constant="16" id="82T-qE-BMM"/>
                                                 <constraint firstItem="RLw-zf-7v6" firstAttribute="leading" secondItem="Vcw-YR-JL6" secondAttribute="leading" constant="16" id="OqF-81-ue5"/>
-                                                <constraint firstItem="Gx5-MH-R0H" firstAttribute="top" secondItem="Vcw-YR-JL6" secondAttribute="top" constant="8" id="PGj-bR-vOn"/>
                                                 <constraint firstAttribute="trailing" secondItem="IwR-T3-xhT" secondAttribute="trailing" id="XtZ-UI-c2A"/>
-                                                <constraint firstAttribute="trailing" secondItem="Gx5-MH-R0H" secondAttribute="trailing" constant="8" id="b3i-nz-E91"/>
                                                 <constraint firstItem="ik9-W0-mpa" firstAttribute="top" secondItem="RLw-zf-7v6" secondAttribute="bottom" constant="5" id="eey-DO-zgN"/>
                                                 <constraint firstItem="IwR-T3-xhT" firstAttribute="top" secondItem="Vcw-YR-JL6" secondAttribute="top" id="fFX-tj-cDB"/>
+                                                <constraint firstItem="oeU-rb-Nl1" firstAttribute="top" secondItem="Vcw-YR-JL6" secondAttribute="top" constant="8" id="fem-ob-EVF"/>
                                                 <constraint firstAttribute="bottom" secondItem="ik9-W0-mpa" secondAttribute="bottom" constant="8" id="muW-Xy-ged"/>
                                                 <constraint firstItem="ik9-W0-mpa" firstAttribute="top" secondItem="RLw-zf-7v6" secondAttribute="bottom" constant="5" id="pnw-yr-GuF"/>
                                                 <constraint firstAttribute="bottom" secondItem="IwR-T3-xhT" secondAttribute="bottom" id="yrR-vZ-ztV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnSharePosts" destination="oeU-rb-Nl1" id="q91-H0-l8C"/>
                                             <outlet property="dateFeeds" destination="ik9-W0-mpa" id="TPm-rn-2Bx"/>
                                             <outlet property="imageFeeds" destination="IwR-T3-xhT" id="O05-5c-cMn"/>
                                             <outlet property="titleFeeds" destination="RLw-zf-7v6" id="3da-Yg-x3I"/>
