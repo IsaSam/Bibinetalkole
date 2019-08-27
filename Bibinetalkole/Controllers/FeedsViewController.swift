@@ -104,6 +104,15 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // animation 1
+        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0)
+        cell.layer.transform = rotationTransform
+        cell.alpha = 0.2
+        
+        UIView.animate(withDuration: 1.5){
+            cell.layer.transform = CATransform3DIdentity
+            cell.alpha = 1.0
+        }
         if indexPath.row + 1 == posts.count{
             loadMorePosts()
         }
@@ -153,9 +162,6 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
             let dataDic = medium as? [[String: Any]]
             if dataDic != nil{
                 self.imgPosts = dataDic!
-                //          let remoteImageUrlString = imgPosts[indexPath.row]
-                //   }
-                ////
                 for images in imgPosts{
                     let imageURL = images["source_url"] as? String
                     imgURLShare = imageURL
@@ -167,7 +173,6 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
                         cell.imageFeeds.layer.cornerRadius = 2.0
                         cell.imageFeeds.clipsToBounds = true
                         cell.imageFeeds.af_setImage(withURL: imgUrl)
-                        //     cell.imageFeeds.cornerRadus(usingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 20, height: 20))
                     }
                     else{
                     }
@@ -246,11 +251,7 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
                         print("+======================= nil ")
                     }
                 let image = imagePost1?.image
-                //    print("imaaaaaaaaaaaaaaaaaaaaage: \(String(describing: image))")
-                    
-                    let vc = UIActivityViewController(activityItems: [title, URl!, image], applicationActivities: [])
-           //         let vc = UIActivityViewController(activityItems: [title as Any, URl!, imagePost1 as Any], applicationActivities: [])
-                    
+                    let vc = UIActivityViewController(activityItems: [title as Any, URl!, image as Any], applicationActivities: [])
                     if let popoverController = vc.popoverPresentationController{
                         popoverController.sourceView = self.view
                         popoverController.sourceRect = self.view.bounds
