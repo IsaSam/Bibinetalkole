@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
-class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PostsCellDelegate{
 
     @IBOutlet weak var tableViewFeeds: UITableView!
     
@@ -22,6 +24,11 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     var urlShows = ""
     var convertedDate: String = ""
     var convertedTime: String = ""
+    var titleShare: String?
+    var postShare: [String: Any] = [:]
+    var imagePost1: UIImageView?
+    var imagePost2: UIImage?
+    var imgShare: UIImage?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -128,6 +135,7 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
         let postTitle = postsTitle[indexPath.row]
         let postImage = postsEmbed[indexPath.row]
         //    let postContent = postsContent[indexPath.row]
+        cell.btnSharePosts.tag = indexPath.row
         
         let imgArray = (postImage as AnyObject).value(forKey: "wp:featuredmedia")
         let mediaDetails = (imgArray as AnyObject).value(forKey: "media_details")
@@ -135,6 +143,7 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         let encoded = postTitle["rendered"] as? String
         cell.titleFeeds.text = encoded?.stringByDecodingHTMLEntities
+        titleShare = encoded?.stringByDecodingHTMLEntities
         //     print(encoded!)
         //       let htmlTag =  postContent["rendered"] as! String
         
@@ -149,6 +158,7 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
                 ////
                 for images in imgPosts{
                     let imageURL = images["source_url"] as? String
+                    imgURLShare = imageURL
                     //      print(imageURL!)
                     if let imagePath = imageURL,
                         let imgUrl = URL(string:  imagePath){
@@ -161,6 +171,9 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
                     }
                     else{
                     }
+                    //  imgShare = cell.imagePost.image
+                    imagePost1 = cell.imageFeeds
+                    imagePost2 = cell.imageFeeds.image
                 }
             }else{}
         }
@@ -188,8 +201,67 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         cell.dateFeeds.text = convertedDate
         
+        cell.btnSharePosts.addTarget(self, action: #selector(FeedsViewController.shareTapped(_:)), for: .touchUpInside)
+        
         return cell
     }
+    
+    func PostsCellDidTapShare(_ sender: FeedCell) {
+        guard let tappedIndexPath = tableViewFeeds.indexPath(for: sender) else { return }
+        print("Sharing", sender, tappedIndexPath)
+    }
+    
+    @objc func shareTapped(_ sender: Any?) {
+        print("share Tapped", sender!)
+        
+    }
+    
+    @IBAction func btnSharePosts(_ sender: UIButton) {
+        
+        postShare = posts[sender.tag]
+        let postShare1 = (postShare as AnyObject).value(forKey: "title") as! [String : Any]
+        let embedDic = (postShare as AnyObject).value(forKey: "_embedded")
+        let embedDicString = embedDic! as! [String: Any]
+        
+        let title = (postShare1["rendered"] as? String)?.stringByDecodingHTMLEntities
+        let URl = postShare["link"] as? String
+        if let imgArray = (embedDicString as AnyObject).value(forKey: "wp:featuredmedia"){
+            let mediaDetails = (imgArray as AnyObject).value(forKey: "media_details")
+            let sizes = (mediaDetails as AnyObject).value(forKey: "sizes")
+          //  let encoded = postTitle["rendered"] as? String
+            let medium =  (sizes as AnyObject).value(forKey: "medium")
+            let dataDic = medium as? [[String: Any]]
+            self.imgPosts = dataDic!
+                for images in imgPosts{
+                    let imageURL = images["source_url"] as? String
+                    print("image urlshare .......\(imageURL!)")
+                    if let imagePath = imageURL,
+                        let imgUrl = URL(string:  imagePath){
+                        imagePost1?.af_setImage(withURL: imgUrl)
+                        
+                        
+                    }
+                    else{
+                        imagePost1?.image = nil
+                        print("+======================= nil ")
+                    }
+                let image = imagePost1?.image
+                //    print("imaaaaaaaaaaaaaaaaaaaaage: \(String(describing: image))")
+                    
+                    let vc = UIActivityViewController(activityItems: [title, URl!, image], applicationActivities: [])
+           //         let vc = UIActivityViewController(activityItems: [title as Any, URl!, imagePost1 as Any], applicationActivities: [])
+                    
+                    if let popoverController = vc.popoverPresentationController{
+                        popoverController.sourceView = self.view
+                        popoverController.sourceRect = self.view.bounds
+                    }
+                    self.present(vc, animated: true, completion: nil)
+                    imagePost1?.image = imagePost2
+                }
+            }
+        
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
