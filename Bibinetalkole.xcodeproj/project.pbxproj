@@ -21,6 +21,7 @@
 		965A85082310A360005BADDB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85072310A360005BADDB /* CollectionViewController.swift */; };
 		965A850A2310A4AD005BADDB /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85092310A4AD005BADDB /* ViewCell.swift */; };
 		965A850C2310DA1E005BADDB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A850B2310DA1E005BADDB /* DetailsViewController.swift */; };
+		96A406A62315E1FE0029F40E /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A406A52315E1FE0029F40E /* AboutUsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		965A85072310A360005BADDB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		965A85092310A4AD005BADDB /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		965A850B2310DA1E005BADDB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		96A406A52315E1FE0029F40E /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		E236E4EAE70F677BB63C3044 /* Pods-Bibinetalkole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibinetalkole.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bibinetalkole/Pods-Bibinetalkole.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				9635B7D6230C2D5600CF32D2 /* FeedsViewController.swift */,
 				965A85072310A360005BADDB /* CollectionViewController.swift */,
 				965A850B2310DA1E005BADDB /* DetailsViewController.swift */,
+				96A406A52315E1FE0029F40E /* AboutUsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				965A85082310A360005BADDB /* CollectionViewController.swift in Sources */,
 				9635B7F1230C503600CF32D2 /* Swift+Gif.swift in Sources */,
 				9635B7D7230C2D5600CF32D2 /* FeedsViewController.swift in Sources */,
+				96A406A62315E1FE0029F40E /* AboutUsViewController.swift in Sources */,
 				9635B7C2230C2C7C00CF32D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

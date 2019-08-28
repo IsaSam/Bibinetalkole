@@ -195,7 +195,7 @@
         <!--Bibinetalkole-->
         <scene sceneID="8v9-Ii-9gR">
             <objects>
-                <viewController id="QnE-OH-29M" sceneMemberID="viewController">
+                <viewController id="QnE-OH-29M" customClass="AboutUsViewController" customModule="Bibinetalkole" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dwY-PO-EPb"/>
                         <viewControllerLayoutGuide type="bottom" id="0VG-J8-VOP"/>
