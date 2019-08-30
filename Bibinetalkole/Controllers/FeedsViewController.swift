@@ -104,13 +104,18 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        // animation 1
+        /*// animation 1
         let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0)
         cell.layer.transform = rotationTransform
         cell.alpha = 0.2
         
         UIView.animate(withDuration: 1.5){
             cell.layer.transform = CATransform3DIdentity
+            cell.alpha = 1.0
+        }*/
+        // animation 2
+        cell.alpha = 0
+        UIView.animate(withDuration: 1.5){
             cell.alpha = 1.0
         }
         if indexPath.row + 1 == posts.count{
