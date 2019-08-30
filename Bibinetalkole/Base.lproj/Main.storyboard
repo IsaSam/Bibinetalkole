@@ -153,13 +153,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TdO-O4-1eF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Feeds" image="icons8-show-property-30" id="acW-dT-cKf">
-                        <color key="badgeColor" red="0.20784313730000001" green="0.0" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="K5P-sn-1XU">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.17017564339999999" green="0.1099434945" blue="0.45757331169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -203,13 +203,62 @@
                     <view key="view" contentMode="scaleToFill" id="78T-2E-8Rc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bibi" translatesAutoresizingMaskIntoConstraints="NO" id="MtJ-rs-Fav">
+                                <rect key="frame" x="0.0" y="64" width="414" height="306"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="306" id="asg-vc-s0Q"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="frQ-6t-ZOh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fabiola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWr-8N-Gkt">
+                                <rect key="frame" x="13" y="169" width="86" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COUPET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSH-6P-Wal">
+                                <rect key="frame" x="13" y="203" width="98" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Km6-7m-Yoj">
+                                <rect key="frame" x="8" y="370" width="398" height="317"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="392" id="Cnd-Uh-Rkc"/>
+                                    <constraint firstAttribute="height" constant="317" id="hp0-4V-nrD"/>
+                                </constraints>
+                                <mutableString key="text">Informations personnelles
+Fabiola Coupet aka Bibinètalkole is a writer and storyteller and a passionate promoter of all things Haiti! Explore Haiti's culture, music, cuisine and art by following her social media accounts.
+
+À propos
+Hosting Haiti's latest hit radio show! We talk a lot of ISH but we back it up though! lodyans netalkole ak Bininetalkole MON-WED-FRI Radio1 90.1FM 4:30-6PM
+
+Biographie
+Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Radio1 90.1FM ki angaje tout aktè nan sosyete a vin fè yon ti koze sou tout kalte sijè, avèk anpil sajès ak respè pou tout moun. Branche Bibinetalkole!</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Km6-7m-Yoj" secondAttribute="trailing" constant="8" id="ELu-hV-bYP"/>
+                            <constraint firstItem="Km6-7m-Yoj" firstAttribute="leading" secondItem="78T-2E-8Rc" secondAttribute="leading" constant="8" id="Qdn-fY-rJN"/>
+                            <constraint firstItem="MtJ-rs-Fav" firstAttribute="leading" secondItem="78T-2E-8Rc" secondAttribute="leading" id="WM3-PK-Tco"/>
+                            <constraint firstAttribute="trailing" secondItem="MtJ-rs-Fav" secondAttribute="trailing" id="Z2d-ge-Ou2"/>
+                            <constraint firstItem="Km6-7m-Yoj" firstAttribute="top" secondItem="MtJ-rs-Fav" secondAttribute="bottom" id="m8e-Jh-ReI"/>
+                            <constraint firstItem="MtJ-rs-Fav" firstAttribute="top" secondItem="dwY-PO-EPb" secondAttribute="bottom" id="qxV-8K-dq4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bibinetalkole" id="SHo-zd-4us"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1md-a9-9Ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2810" y="-865"/>
+            <point key="canvasLocation" x="-2810" y="-889"/>
         </scene>
         <!--Bibinetalkole Albums-->
         <scene sceneID="ZEn-31-nIk">
@@ -492,10 +541,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3x-SI-kJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2810" y="-1574"/>
+            <point key="canvasLocation" x="-2810" y="-1724"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Bibi" width="960" height="960"/>
         <image name="gradient2" width="1440" height="900"/>
         <image name="iconfinder_share-icon_64" width="64" height="64"/>
         <image name="icons8-browse-podcasts-30" width="30" height="30"/>
@@ -505,6 +555,6 @@
         <image name="icons8-show-property-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="67Y-yo-jW3"/>
+        <segue reference="ILf-lD-7Bw"/>
     </inferredMetricsTieBreakers>
 </document>
