@@ -378,7 +378,7 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wmN-sp-DiW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="tintColor" red="0.96993762254714966" green="0.88003361225128174" blue="0.19603687524795532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="prT-Ld-AxN">
                             <size key="itemSize" width="177" height="177"/>
@@ -415,7 +415,7 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.19782748287671223" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="nP9-H1-B0c" firstAttribute="leading" secondItem="JcC-x5-ngN" secondAttribute="leading" constant="4" id="7dt-1k-bSa"/>
                                                 <constraint firstItem="5kB-0p-7jO" firstAttribute="top" secondItem="JcC-x5-ngN" secondAttribute="top" id="7kQ-LL-f7v"/>
@@ -594,6 +594,6 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
         <image name="icons8-show-property-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="67Y-yo-jW3"/>
+        <segue reference="ILf-lD-7Bw"/>
     </inferredMetricsTieBreakers>
 </document>
