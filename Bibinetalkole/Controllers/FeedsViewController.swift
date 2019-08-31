@@ -30,12 +30,26 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     var imagePost2: UIImage?
     var imgShare: UIImage?
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    /*override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }*/
+   /* override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNeedsStatusBarAppearanceUpdate()
     }
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }*/
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    //    UIApplication.statusBarTextColor = UIColor.blue
+    //    NavigationController.NavigationBar.BarStyle = UIBarStyle.Black;
+  //  navigationController?.navigationBar.barTintColor = UIColor.blue
+        
+       
+        
         navigationItem.title = "Bibinetalkole"
         fetchPosts()
         tableViewFeeds.delegate = self
@@ -104,20 +118,7 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        /*// animation 1
-        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0)
-        cell.layer.transform = rotationTransform
-        cell.alpha = 0.2
-        
-        UIView.animate(withDuration: 1.5){
-            cell.layer.transform = CATransform3DIdentity
-            cell.alpha = 1.0
-        }*/
-        // animation 2
-        cell.alpha = 0
-        UIView.animate(withDuration: 1.5){
-            cell.alpha = 1.0
-        }
+
         if indexPath.row + 1 == posts.count{
             loadMorePosts()
         }
@@ -178,6 +179,7 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
                         cell.imageFeeds.layer.cornerRadius = 2.0
                         cell.imageFeeds.clipsToBounds = true
                         cell.imageFeeds.af_setImage(withURL: imgUrl)
+                        
                     }
                     else{
                     }
@@ -284,4 +286,20 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     
+}
+extension UIApplication {
+    class var statusBarBackgroundColor: UIColor? {
+        get {
+            return (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor
+        } set {
+            (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor = newValue
+        }
+    }
+    class var statusBarTextColor: UIColor?{
+        get{
+            return (shared.value(forKey: "statusBar") as? UIView)?.tintColor
+        } set{
+            (shared.value(forKey: "statusBar") as? UIView)?.tintColor = newValue
+        }
+    }
 }

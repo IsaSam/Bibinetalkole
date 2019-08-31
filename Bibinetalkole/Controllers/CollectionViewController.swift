@@ -95,7 +95,7 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
                         let imgUrl = URL(string:  imagePath){
                         //          cell.posterImageView.layer.borderColor = UIColor.white.cgColor
                         //        cell.posterImageView.layer.borderWidth = 2.0
-                        cell.posterImageView.layer.cornerRadius = 2.0
+                        cell.posterImageView.layer.cornerRadius = 6.0
                         cell.posterImageView.clipsToBounds = true
                         cell.posterImageView.af_setImage(withURL: imgUrl)
                     }
@@ -158,10 +158,12 @@ extension CollectionViewcontroller: UICollectionViewDelegateFlowLayout {
                     }
                 }
             }else{
+                /*
                 let errorAlertController = UIAlertController(title: "End of posts", message: "Please Top up the list", preferredStyle: .alert)
                 let cancelAction = UIAlertAction(title: "OK", style: .cancel)
                 errorAlertController.addAction(cancelAction)
                 self.present(errorAlertController, animated: true)
+                */
             }
         }
     }
