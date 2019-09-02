@@ -33,20 +33,9 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     /*override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }*/
-   /* override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNeedsStatusBarAppearanceUpdate()
-    }
-    override var preferredStatusBarStyle : UIStatusBarStyle {
-        return .lightContent
-    }*/
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    //    UIApplication.statusBarTextColor = UIColor.blue
-    //    NavigationController.NavigationBar.BarStyle = UIBarStyle.Black;
-  //  navigationController?.navigationBar.barTintColor = UIColor.blue
         
        
         
@@ -286,20 +275,4 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     
-}
-extension UIApplication {
-    class var statusBarBackgroundColor: UIColor? {
-        get {
-            return (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor
-        } set {
-            (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor = newValue
-        }
-    }
-    class var statusBarTextColor: UIColor?{
-        get{
-            return (shared.value(forKey: "statusBar") as? UIView)?.tintColor
-        } set{
-            (shared.value(forKey: "statusBar") as? UIView)?.tintColor = newValue
-        }
-    }
 }

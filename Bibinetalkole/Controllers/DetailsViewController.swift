@@ -30,7 +30,7 @@ class DetailsViewController: UIViewController {
     }
     func showActivityIndicator(show: Bool) {
         if show {
-            Activity.startAnimating()
+            Activity.stopAnimating()
         } else {
             Activity.stopAnimating()
         }
@@ -99,6 +99,7 @@ class DetailsViewController: UIViewController {
                     playAudio.load(request)
                     playAudio.navigationDelegate = self as? WKNavigationDelegate
                     playAudio.scrollView.isScrollEnabled = false
+                    showActivityIndicator(show: false)
                 }
             }
             else{
@@ -124,10 +125,10 @@ class DetailsViewController: UIViewController {
             contentLabel.text = ""
         }
     }
-   /* func webViewDidFinishLoad(_ : WKWebView) {
+    func webViewDidFinishLoad(_ : WKWebView) {
         Activity.stopAnimating()
         Activity.isHidden = true
-    }*/
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

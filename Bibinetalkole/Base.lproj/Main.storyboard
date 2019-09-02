@@ -513,9 +513,8 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                                             <constraint firstAttribute="height" constant="286" id="UlA-bP-b30"/>
                                         </constraints>
                                     </imageView>
-                                    <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3E-l2-oWM">
+                                    <wkWebView opaque="NO" contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3E-l2-oWM">
                                         <rect key="frame" x="0.0" y="294" width="414" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="nyS-Cp-SN8"/>
                                             <constraint firstAttribute="height" constant="100" id="xZP-qb-ySy"/>
@@ -525,6 +524,14 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                                             <wkPreferences key="preferences"/>
                                         </wkWebViewConfiguration>
                                     </wkWebView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Sw5-CS-EFN">
+                                        <rect key="frame" x="197" y="334" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="bE5-3H-aBN"/>
+                                            <constraint firstAttribute="width" constant="20" id="cGY-1Z-lhq"/>
+                                        </constraints>
+                                        <color key="color" red="0.45826062820000002" green="0.41926914450000002" blue="0.095236318170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymg-Xu-dWj">
                                         <rect key="frame" x="8" y="409" width="398" height="24"/>
                                         <constraints>
@@ -535,14 +542,6 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Sw5-CS-EFN">
-                                        <rect key="frame" x="197" y="334" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="bE5-3H-aBN"/>
-                                            <constraint firstAttribute="width" constant="20" id="cGY-1Z-lhq"/>
-                                        </constraints>
-                                        <color key="color" red="0.45826062820000002" green="0.41926914450000002" blue="0.095236318170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.45826062820000002" green="0.41926914450000002" blue="0.095236318170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
