@@ -18,9 +18,11 @@
 		9635B7F0230C503600CF32D2 /* AyiboAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7ED230C503400CF32D2 /* AyiboAPIManager.swift */; };
 		9635B7F1230C503600CF32D2 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7EE230C503500CF32D2 /* Swift+Gif.swift */; };
 		9635B7F4230C5C0C00CF32D2 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635B7F3230C5C0C00CF32D2 /* Strings.swift */; };
+		963DFB542318B078003DB5D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963DFB532318B078003DB5D6 /* Images.xcassets */; };
 		965A85082310A360005BADDB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85072310A360005BADDB /* CollectionViewController.swift */; };
 		965A850A2310A4AD005BADDB /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A85092310A4AD005BADDB /* ViewCell.swift */; };
 		965A850C2310DA1E005BADDB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A850B2310DA1E005BADDB /* DetailsViewController.swift */; };
+		96A406A62315E1FE0029F40E /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A406A52315E1FE0029F40E /* AboutUsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +40,11 @@
 		9635B7ED230C503400CF32D2 /* AyiboAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AyiboAPIManager.swift; path = Bibinetalkole/ManagerAPI/AyiboAPIManager.swift; sourceTree = SOURCE_ROOT; };
 		9635B7EE230C503500CF32D2 /* Swift+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Swift+Gif.swift"; path = "Bibinetalkole/ManagerAPI/Swift+Gif.swift"; sourceTree = SOURCE_ROOT; };
 		9635B7F3230C5C0C00CF32D2 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		963DFB532318B078003DB5D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		965A85072310A360005BADDB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		965A85092310A4AD005BADDB /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		965A850B2310DA1E005BADDB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		96A406A52315E1FE0029F40E /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		E236E4EAE70F677BB63C3044 /* Pods-Bibinetalkole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibinetalkole.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bibinetalkole/Pods-Bibinetalkole.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +108,7 @@
 				9635B7D6230C2D5600CF32D2 /* FeedsViewController.swift */,
 				965A85072310A360005BADDB /* CollectionViewController.swift */,
 				965A850B2310DA1E005BADDB /* DetailsViewController.swift */,
+				96A406A52315E1FE0029F40E /* AboutUsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				9635B7CA230C2C8000CF32D2 /* Assets.xcassets */,
+				963DFB532318B078003DB5D6 /* Images.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9635B7CE230C2C8000CF32D2 /* LaunchScreen.storyboard in Resources */,
+				963DFB542318B078003DB5D6 /* Images.xcassets in Resources */,
 				9635B7CB230C2C8000CF32D2 /* Assets.xcassets in Resources */,
 				9635B7C9230C2C7C00CF32D2 /* Main.storyboard in Resources */,
 			);
@@ -276,6 +283,7 @@
 				965A85082310A360005BADDB /* CollectionViewController.swift in Sources */,
 				9635B7F1230C503600CF32D2 /* Swift+Gif.swift in Sources */,
 				9635B7D7230C2D5600CF32D2 /* FeedsViewController.swift in Sources */,
+				96A406A62315E1FE0029F40E /* AboutUsViewController.swift in Sources */,
 				9635B7C2230C2C7C00CF32D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
