@@ -26,14 +26,14 @@ Here's a walkthrough of implemented user stories:
 
 <table>
 <tr>
-<td><img src='https://i.imgur.com/hZeTqiZ.png' title='Logo part 1' height='360' width='220' alt='Bibinetalkole' /></td>
-<td><img src='https://i.imgur.com/COOG7zT.png' title='posts' height='360' width='220'  alt='posts image' /></td>
-<td><img src='https://i.imgur.com/TAgrMuR.png' title='posts' height='360' width='220'  alt='posts image' /></td>
+<td><img src='https://i.imgur.com/hZeTqiZ.png' title='Logo part 1' height='370' width='220' alt='Bibinetalkole' /></td>
+<td><img src='https://i.imgur.com/COOG7zT.png' title='posts' height='370' width='220'  alt='posts image' /></td>
+<td><img src='https://i.imgur.com/TAgrMuR.png' title='posts' height='370' width='220'  alt='posts image' /></td>
 </tr>
 <tr>
-<td><img src='https://i.imgur.com/xbR1nMT.png' title='posts' height='360' width='220'  alt='posts image' /></td>
-<td><img src='https://i.imgur.com/HCIvoCn.png' title='posts' height='360' width='220'  alt='posts image' /></td>
-<td><img src='https://i.imgur.com/Mk6wzUn.png' title='posts' height='360' width='220'  alt='posts image' /></td>
+<td><img src='https://i.imgur.com/xbR1nMT.png' title='posts' height='370' width='220'  alt='posts image' /></td>
+<td><img src='https://i.imgur.com/HCIvoCn.png' title='posts' height='370' width='220'  alt='posts image' /></td>
+<td><img src='https://i.imgur.com/Mk6wzUn.png' title='posts' height='370' width='220'  alt='posts image' /></td>
 </tr>
 
 </table>
