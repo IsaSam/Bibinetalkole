@@ -23,7 +23,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fgd-hX-uUQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" red="0.074509803921568626" green="0.047058823529411764" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.96993762254714966" green="0.88003361225128174" blue="0.19603687524795532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedCell" rowHeight="280" id="vGf-hu-Ych" customClass="FeedCell" customModule="Bibinetalkole" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="280"/>
@@ -34,15 +35,11 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IwR-T3-xhT">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
-                                                    <color key="backgroundColor" red="0.21594311669999999" green="0.11119810199999999" blue="0.2833642039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="1pl-ub-LIZ"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="ids-0y-NAX"/>
                                                     </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient2" translatesAutoresizingMaskIntoConstraints="NO" id="gVm-rf-ySf">
-                                                    <rect key="frame" x="0.0" y="195" width="414" height="85"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ik9-W0-mpa">
                                                     <rect key="frame" x="16" y="246.66666666666663" width="382" height="25"/>
@@ -134,7 +131,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.17017564339999999" green="0.1099434945" blue="0.45757331169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="TdO-O4-1eF" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -156,10 +156,15 @@
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="K5P-sn-1XU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K5P-sn-1XU">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -185,6 +190,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.96993762254714966" green="0.88003361225128174" blue="0.19603687524795532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bibinetalkole Search" id="7Ai-VT-6cM"/>
                 </viewController>
@@ -231,20 +237,21 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="392" id="Cnd-Uh-Rkc"/>
                                     <constraint firstAttribute="height" constant="317" id="hp0-4V-nrD"/>
                                 </constraints>
-                                <mutableString key="text">Informations personnelles
+                                <string key="text">Informations personnelles
 Fabiola Coupet aka Bibinètalkole is a writer and storyteller and a passionate promoter of all things Haiti! Explore Haiti's culture, music, cuisine and art by following her social media accounts.
 
 À propos
 Hosting Haiti's latest hit radio show! We talk a lot of ISH but we back it up though! lodyans netalkole ak Bininetalkole MON-WED-FRI Radio1 90.1FM 4:30-6PM
 
 Biographie
-Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Radio1 90.1FM ki angaje tout aktè nan sosyete a vin fè yon ti koze sou tout kalte sijè, avèk anpil sajès ak respè pou tout moun. Branche Bibinetalkole!</mutableString>
+Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Radio1 90.1FM ki angaje tout aktè nan sosyete a vin fè yon ti koze sou tout kalte sijè, avèk anpil sajès ak respè pou tout moun. Branche Bibinetalkole!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.96993762254714966" green="0.88003361225128174" blue="0.19603687524795532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Km6-7m-Yoj" secondAttribute="trailing" constant="8" id="ELu-hV-bYP"/>
                             <constraint firstItem="Km6-7m-Yoj" firstAttribute="leading" secondItem="78T-2E-8Rc" secondAttribute="leading" constant="8" id="Qdn-fY-rJN"/>
@@ -272,6 +279,7 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.96993762254714966" green="0.88003361225128174" blue="0.19603687524795532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bibinetalkole Albums" id="M5M-x7-hnS"/>
                 </viewController>
@@ -283,12 +291,19 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
         <scene sceneID="Sth-8u-Atv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="07A-lG-pt5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About us" image="icons8-contact-us-24" id="00n-bA-i0Y"/>
+                    <tabBarItem key="tabBarItem" title="About us" image="icons8-contact-us-24" id="00n-bA-i0Y">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="xDc-KM-nx9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xDc-KM-nx9">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.090196078431372548" green="0.011764705882352941" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -303,12 +318,19 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
         <scene sceneID="Lxf-od-ent">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b29-5P-dvh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Albums" image="icons8-music-album-30" id="lL1-qE-lf7"/>
+                    <tabBarItem key="tabBarItem" title="Albums" image="icons8-music-album-30" id="lL1-qE-lf7">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="qT0-IA-5ET">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qT0-IA-5ET">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.10980392156862745" green="0.0" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -324,13 +346,18 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sUd-wQ-Shd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="icons8-search-26" id="ouY-IF-62B">
-                        <color key="badgeColor" red="0.20784313725490197" green="0.0" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="NkF-Jh-Y1l">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NkF-Jh-Y1l">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.17017564339999999" green="0.1099434945" blue="0.45757331169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -351,7 +378,8 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wmN-sp-DiW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.074509803921568626" green="0.047058823529411764" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="tintColor" red="0.96993762254714966" green="0.88003361225128174" blue="0.19603687524795532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="prT-Ld-AxN">
                             <size key="itemSize" width="177" height="177"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -371,28 +399,34 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5kB-0p-7jO">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="143.33333333333334"/>
-                                                    <color key="backgroundColor" red="0.047143883999999997" green="0.36116248369999998" blue="0.163305968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Caption" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP9-H1-B0c">
-                                                    <rect key="frame" x="4" y="153.33333333333334" width="172" height="16.666666666666657"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16.5" id="PkC-mf-neG"/>
+                                                        <constraint firstAttribute="height" constant="143.33000000000001" id="MTu-xl-MUc"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="nsv-cF-xiv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Samyr De Bellande, Stanley Pierre Etienne ak Diego Gouin nan #Bibinetalkole" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP9-H1-B0c">
+                                                    <rect key="frame" x="4" y="147.33333333333334" width="172" height="32.666666666666657"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32.670000000000002" id="WFD-yR-Fud"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="yam-OZ-jQI"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="11"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.047143883999999997" green="0.36116248369999998" blue="0.163305968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="nP9-H1-B0c" firstAttribute="leading" secondItem="JcC-x5-ngN" secondAttribute="leading" constant="4" id="7dt-1k-bSa"/>
                                                 <constraint firstItem="5kB-0p-7jO" firstAttribute="top" secondItem="JcC-x5-ngN" secondAttribute="top" id="7kQ-LL-f7v"/>
                                                 <constraint firstItem="5kB-0p-7jO" firstAttribute="leading" secondItem="JcC-x5-ngN" secondAttribute="leading" id="GKH-Qj-06r"/>
-                                                <constraint firstAttribute="bottom" secondItem="nP9-H1-B0c" secondAttribute="bottom" constant="10" id="b2u-LI-kKt"/>
+                                                <constraint firstItem="nP9-H1-B0c" firstAttribute="top" secondItem="5kB-0p-7jO" secondAttribute="bottom" constant="4" id="PWb-Kd-C6K"/>
+                                                <constraint firstAttribute="trailing" secondItem="5kB-0p-7jO" secondAttribute="trailing" id="VeT-2P-UgL"/>
+                                                <constraint firstAttribute="bottom" secondItem="nP9-H1-B0c" secondAttribute="bottom" id="b2u-LI-kKt"/>
                                                 <constraint firstAttribute="trailing" secondItem="nP9-H1-B0c" secondAttribute="trailing" constant="4" id="fzh-Lf-qc5"/>
+                                                <constraint firstItem="5kB-0p-7jO" firstAttribute="top" secondItem="JcC-x5-ngN" secondAttribute="top" id="iD1-aX-ZJs"/>
+                                                <constraint firstItem="5kB-0p-7jO" firstAttribute="leading" secondItem="JcC-x5-ngN" secondAttribute="leading" id="iwJ-hB-Nhm"/>
                                                 <constraint firstAttribute="trailing" secondItem="5kB-0p-7jO" secondAttribute="trailing" id="lqO-fQ-RqU"/>
-                                                <constraint firstItem="nP9-H1-B0c" firstAttribute="top" secondItem="5kB-0p-7jO" secondAttribute="bottom" constant="10" id="uiA-Fj-mjK"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -424,20 +458,25 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPb-YK-TOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3557" y="-865"/>
+            <point key="canvasLocation" x="-3557.971014492754" y="-865.76086956521749"/>
         </scene>
         <!--Shows-->
         <scene sceneID="ffk-1O-gwy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fci-FI-duH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Shows" image="icons8-browse-podcasts-30" id="zXe-xN-6Se">
-                        <color key="badgeColor" red="0.16862745098039217" green="0.10980392156862745" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="GUm-Lu-w6t">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GUm-Lu-w6t">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.17017564339999999" green="0.1099434945" blue="0.45757331169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -474,9 +513,8 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                                             <constraint firstAttribute="height" constant="286" id="UlA-bP-b30"/>
                                         </constraints>
                                     </imageView>
-                                    <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3E-l2-oWM">
+                                    <wkWebView opaque="NO" contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3E-l2-oWM">
                                         <rect key="frame" x="0.0" y="294" width="414" height="100"/>
-                                        <color key="backgroundColor" red="0.090196078431372548" green="0.011764705882352941" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="nyS-Cp-SN8"/>
                                             <constraint firstAttribute="height" constant="100" id="xZP-qb-ySy"/>
@@ -486,6 +524,14 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                                             <wkPreferences key="preferences"/>
                                         </wkWebViewConfiguration>
                                     </wkWebView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Sw5-CS-EFN">
+                                        <rect key="frame" x="197" y="334" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="bE5-3H-aBN"/>
+                                            <constraint firstAttribute="width" constant="20" id="cGY-1Z-lhq"/>
+                                        </constraints>
+                                        <color key="color" red="0.45826062820000002" green="0.41926914450000002" blue="0.095236318170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymg-Xu-dWj">
                                         <rect key="frame" x="8" y="409" width="398" height="24"/>
                                         <constraints>
@@ -493,23 +539,16 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="mMS-03-6qb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Sw5-CS-EFN">
-                                        <rect key="frame" x="197" y="334" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="bE5-3H-aBN"/>
-                                            <constraint firstAttribute="width" constant="20" id="cGY-1Z-lhq"/>
-                                        </constraints>
-                                        <color key="color" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.074509803921568626" green="0.047058823529411764" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.45826062820000002" green="0.41926914450000002" blue="0.095236318170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Sw5-CS-EFN" firstAttribute="top" secondItem="ox5-gy-Tat" secondAttribute="bottom" constant="48" id="ELK-kC-UjW"/>
                                     <constraint firstItem="Sw5-CS-EFN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4i-AW-5do" secondAttribute="leading" constant="197" id="NYx-rV-m95"/>
-                                    <constraint firstItem="Sw5-CS-EFN" firstAttribute="centerX" secondItem="I4i-AW-5do" secondAttribute="centerX" id="W30-PZ-gDH"/>
+                                    <constraint firstItem="Sw5-CS-EFN" firstAttribute="centerX" secondItem="I4i-AW-5do" secondAttribute="centerX" id="QME-tj-8IP"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Sw5-CS-EFN" secondAttribute="trailing" constant="197" id="bLf-UG-pyI"/>
                                     <constraint firstItem="ox5-gy-Tat" firstAttribute="top" secondItem="I4i-AW-5do" secondAttribute="top" id="bgq-Be-YIp"/>
                                     <constraint firstItem="Ymg-Xu-dWj" firstAttribute="leading" secondItem="I4i-AW-5do" secondAttribute="leading" constant="8" id="dDC-H1-dIb"/>
@@ -523,7 +562,7 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.16862745100000001" green="0.0" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="I4i-AW-5do" firstAttribute="leading" secondItem="ozj-Sp-2Lz" secondAttribute="leading" id="8Kg-I7-ZNv"/>
                             <constraint firstItem="I4i-AW-5do" firstAttribute="top" secondItem="Yvj-Xy-sCD" secondAttribute="bottom" id="A2w-Zy-VOS"/>
@@ -546,7 +585,6 @@ Anplis de bèl mizik, ak bon lodyans, Bibinètalkole se yon emisyon radyo sou Ra
     </scenes>
     <resources>
         <image name="Bibi" width="960" height="960"/>
-        <image name="gradient2" width="1440" height="900"/>
         <image name="iconfinder_share-icon_64" width="64" height="64"/>
         <image name="icons8-browse-podcasts-30" width="30" height="30"/>
         <image name="icons8-contact-us-24" width="24" height="24"/>

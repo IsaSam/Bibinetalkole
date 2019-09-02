@@ -30,12 +30,15 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     var imagePost2: UIImage?
     var imgShare: UIImage?
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    /*override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
-    }
-    
+    }*/
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        
         navigationItem.title = "Bibinetalkole"
         fetchPosts()
         tableViewFeeds.delegate = self
@@ -104,15 +107,7 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        // animation 1
-        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0)
-        cell.layer.transform = rotationTransform
-        cell.alpha = 0.2
-        
-        UIView.animate(withDuration: 1.5){
-            cell.layer.transform = CATransform3DIdentity
-            cell.alpha = 1.0
-        }
+
         if indexPath.row + 1 == posts.count{
             loadMorePosts()
         }
@@ -173,6 +168,7 @@ class FeedsViewController: UIViewController, UITableViewDataSource, UITableViewD
                         cell.imageFeeds.layer.cornerRadius = 2.0
                         cell.imageFeeds.clipsToBounds = true
                         cell.imageFeeds.af_setImage(withURL: imgUrl)
+                        
                     }
                     else{
                     }
